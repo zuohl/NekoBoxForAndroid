@@ -24,34 +24,15 @@ import moe.matsuri.nb4a.tproxy.system.AndroidRootShellGateway
 class TproxyInstance(
     profile: ProxyEntity,
     var service: BaseService.Interface? = null,
-) : BoxInstance(profile) {
-
-    var notTmp = true
-    var lastSelectorGroupId = -1L
-    var displayProfileName = ServiceNotification.genTitle(profile)
-    var looper: TrafficLooper? = null
+) : ProxyInstance(profile, service) {
 
     private val rootAccess = AndroidRootShellGateway()
     private var engine: RootModeEngine<*>? = null
 
-    override fun buildConfig() {
-        config = buildConfig(profile)
-        lastSelectorGroupId = super.config.selectorGroupId
-        if (notTmp) Logs.d(config.config)
-    }
-
-    fun buildConfigTmp() {
-        notTmp = false
-        buildConfig()
-    }
-
     /** No in-process core: the sing-box binary is started as a root daemon. */
     override suspend fun loadConfig() {
-        // intentionally do not call Libcore.newSingBoxInstance
-    }
-
-    override suspend fun init() {
-        buildConfig()
+        // intentionally do not call Libcore.newSingBoxInstance; the daemon is
+        // launched as a separate process by the root engine in launch().
     }
 
     override fun launch() {
