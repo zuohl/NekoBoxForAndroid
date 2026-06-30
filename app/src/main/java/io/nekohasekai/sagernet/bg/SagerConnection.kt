@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.bg
+﻿package io.nekohasekai.sagernet.bg
 
 import android.content.ComponentName
 import android.content.Context
@@ -25,6 +25,7 @@ class SagerConnection(
             get() = when (DataStore.serviceMode) {
                 Key.MODE_PROXY -> ProxyService::class
                 Key.MODE_VPN -> VpnService::class
+                Key.MODE_TPROXY -> TproxyService::class
                 else -> throw UnknownError()
             }.java
 

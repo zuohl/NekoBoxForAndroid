@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.bg
+﻿package io.nekohasekai.sagernet.bg
 
 import android.app.Service
 import android.content.Context
@@ -9,6 +9,7 @@ import android.app.ActivityManager
 import android.widget.Toast
 import io.nekohasekai.sagernet.Action
 import io.nekohasekai.sagernet.BootReceiver
+import io.nekohasekai.sagernet.Key
 import io.nekohasekai.sagernet.R
 import io.nekohasekai.sagernet.SagerNet
 import io.nekohasekai.sagernet.aidl.ISagerNetService
@@ -324,7 +325,11 @@ class BaseService {
                 return Service.START_NOT_STICKY
             }
 
-            val proxy = ProxyInstance(profile, this)
+            val proxy = if (DataStore.serviceMode == Key.MODE_TPROXY) {
+                io.nekohasekai.sagernet.bg.proto.TproxyInstance(profile, this)
+            } else {
+                ProxyInstance(profile, this)
+            }
             data.proxy = proxy
             BootReceiver.enabled = DataStore.persistAcrossReboot
             if (!data.closeReceiverRegistered) {

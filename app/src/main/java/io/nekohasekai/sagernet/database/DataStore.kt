@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.database
+﻿package io.nekohasekai.sagernet.database
 
 import android.os.Binder
 import android.os.Build
@@ -106,6 +106,14 @@ object DataStore : OnPreferenceDataStoreChangeListener {
     var appLanguage by configurationStore.string(Key.APP_LANGUAGE) { "" }
     var serviceMode by configurationStore.string(Key.SERVICE_MODE) { Key.MODE_VPN }
 
+    // tproxy root daemon mode (independent sing-box process driven by root iptables)
+    var tproxyRootPort by configurationStore.int(Key.TPROXY_ROOT_PORT) { 65535 }
+    var tproxyRootIpv6Disabler by configurationStore.boolean(Key.TPROXY_ROOT_IPV6_DISABLER)
+    var tproxyRootAccessLog by configurationStore.boolean(Key.TPROXY_ROOT_ACCESS_LOG)
+    var tproxyRootEbpf by configurationStore.boolean(Key.TPROXY_ROOT_EBPF)
+    var tproxyRootEbpfDirectBypass by configurationStore.boolean(Key.TPROXY_ROOT_EBPF_DIRECT_BYPASS)
+    var tproxyRootBootScript by configurationStore.boolean(Key.TPROXY_ROOT_BOOT_SCRIPT)
+
     var trafficSniffing by configurationStore.stringToInt(Key.TRAFFIC_SNIFFING) { 1 }
     var resolveDestination by configurationStore.boolean(Key.RESOLVE_DESTINATION)
 
@@ -134,7 +142,7 @@ object DataStore : OnPreferenceDataStoreChangeListener {
 
     var rulesGeositeUrl by configurationStore.string(Key.RULES_GEOSITE_URL) { "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db" }
     var rulesGeoipUrl by configurationStore.string(Key.RULES_GEOIP_URL) { "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db" }
-    var rulesUpdateInterval by configurationStore.string(Key.RULES_UPDATE_INTERVAL) { "0" } // 默认为0，不自动更新
+    var rulesUpdateInterval by configurationStore.string(Key.RULES_UPDATE_INTERVAL) { "0" } // 榛樿涓?锛屼笉鑷姩鏇存柊
 
     // hopefully hashCode = mHandle doesn't change, currently this is true from KitKat to Nougat
     private val userIndex by lazy { Binder.getCallingUserHandle().hashCode() }
@@ -314,7 +322,7 @@ object DataStore : OnPreferenceDataStoreChangeListener {
         set(value) = configurationStore.putString("webdavPassword", value)
 
     var webdavPath: String?
-        get() = configurationStore.getString("webdavPath") ?: "NekoBox"  // 设置默认值
+        get() = configurationStore.getString("webdavPath") ?: "NekoBox"  // 璁剧疆榛樿鍊?
         set(value) = configurationStore.putString("webdavPath", value)
 
     var globalMode by configurationStore.boolean(Key.GLOBAL_MODE)

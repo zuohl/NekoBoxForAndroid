@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet
+﻿package io.nekohasekai.sagernet
 
 const val CONNECTION_TEST_URL = "http://www.gstatic.com/generate_204"
 
@@ -18,6 +18,7 @@ object Key {
     const val SERVICE_MODE = "serviceMode"
     const val MODE_VPN = "vpn"
     const val MODE_PROXY = "proxy"
+    const val MODE_TPROXY = "tproxy"
 
     const val GLOBAL_CUSTOM_CONFIG = "globalCustomConfig"
 
@@ -189,6 +190,14 @@ object Key {
     const val WEBDAV_PATH = "webdavPath"
 
     const val GLOBAL_MODE = "globalMode"
+
+    // tproxy root daemon mode
+    const val TPROXY_ROOT_PORT = "tproxyRootPort"
+    const val TPROXY_ROOT_IPV6_DISABLER = "tproxyRootIpv6Disabler"
+    const val TPROXY_ROOT_ACCESS_LOG = "tproxyRootAccessLog"
+    const val TPROXY_ROOT_EBPF = "tproxyRootEbpf"
+    const val TPROXY_ROOT_EBPF_DIRECT_BYPASS = "tproxyRootEbpfDirectBypass"
+    const val TPROXY_ROOT_BOOT_SCRIPT = "tproxyRootBootScript"
 }
 
 object TunImplementation {

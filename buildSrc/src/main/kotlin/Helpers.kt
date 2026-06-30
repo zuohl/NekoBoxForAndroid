@@ -58,6 +58,7 @@ fun Project.setupCommon() {
         }
         (android as ExtensionAware).extensions.getByName<KotlinJvmOptions>("kotlinOptions").apply {
             jvmTarget = JavaVersion.VERSION_1_8.toString()
+            freeCompilerArgs = freeCompilerArgs + "-Xmulti-dollar-interpolation"
         }
         lint {
             showAll = true

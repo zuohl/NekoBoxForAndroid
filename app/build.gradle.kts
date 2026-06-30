@@ -3,6 +3,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("org.jetbrains.kotlin.plugin.serialization")
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
 }
@@ -43,6 +44,7 @@ dependencies {
     implementation(fileTree("libs"))
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.recyclerview:recyclerview:1.3.0")
     implementation("androidx.activity:activity-ktx:1.10.1")
@@ -71,6 +73,10 @@ dependencies {
     implementation("com.jakewharton:process-phoenix:2.1.2")
     implementation("com.esotericsoftware:kryo:5.2.1")
     implementation("com.google.guava:guava:31.0.1-android")
+    implementation("com.github.topjohnwu.libsu:core:6.0.0")
+    implementation(project(":setuidgid"))
+    implementation(project(":ipv6disabler"))
+    implementation(project(":bpfmatcher"))
     implementation("org.ini4j:ini4j:0.5.4")
 
     implementation("com.simplecityapps:recyclerview-fastscroll:2.0.1") {

@@ -1,4 +1,4 @@
-package io.nekohasekai.sagernet.fmt
+﻿package io.nekohasekai.sagernet.fmt
 
 import android.widget.Toast
 import io.nekohasekai.sagernet.*
@@ -163,6 +163,9 @@ fun buildConfig(
     val nonCustomFinalHosts = hashSetOf<String>()
     val groupCache = HashMap<Long, ProxyGroup?>()
     val isVPN = DataStore.serviceMode == Key.MODE_VPN
+    val isTproxy = DataStore.serviceMode == Key.MODE_TPROXY
+    // inbound tag used by DNS/route rules; tproxy mode uses the tproxy inbound instead of tun
+    val mainInboundTag = if (isTproxy) "tproxy-in" else "tun-in"
     val bind = if (!forTest && DataStore.allowAccess) "0.0.0.0" else LOCALHOST
     val remoteDns = DataStore.remoteDns.split("\n")
         .mapNotNull { dns -> dns.trim().takeIf { it.isNotBlank() && !it.startsWith("#") } }
@@ -238,6 +241,16 @@ fun buildConfig(
         inbounds = mutableListOf()
 
         if (!forTest) {
+            if (isTproxy) inbounds.add(Inbound_TProxyOptions().apply {
+                type = "tproxy"
+                tag = "tproxy-in"
+                listen = "::"
+                listen_port = DataStore.tproxyRootPort
+                network = "tcp,udp"
+                sniff = needSniff
+                sniff_override_destination = needSniffOverride
+                domain_strategy = genDomainStrategy(DataStore.resolveDestination)
+            })
             if (isVPN) inbounds.add(Inbound_TunOptions().apply {
                 type = "tun"
                 tag = "tun-in"
@@ -295,7 +308,7 @@ fun buildConfig(
             rules = mutableListOf()
             rule_set = mutableListOf()
 
-            // 添加并发拨号设置
+            // 娣诲姞骞跺彂鎷ㄥ彿璁剧疆
              concurrent_dial = DataStore.concurrentDial
         }
 
@@ -592,11 +605,11 @@ fun buildConfig(
 
         val mainProxyTag = (if (buildSelector) TAG_PROXY else tagMap[proxy.id]) ?: TAG_PROXY
 
-        // 在应用用户规则之前检查全局模式
+        // 鍦ㄥ簲鐢ㄧ敤鎴疯鍒欎箣鍓嶆鏌ュ叏灞€妯″紡
         if (!forTest && DataStore.globalMode) {
-            // 全局模式下的规则处理
+            // 鍏ㄥ眬妯″紡涓嬬殑瑙勫垯澶勭悊
             
-            // 绕过内部网络（如果启用）
+            // 缁曡繃鍐呴儴缃戠粶锛堝鏋滃惎鐢級
             if (DataStore.bypassLan) {
                 route.rules.add(Rule_DefaultOptions().apply {
                     ip_cidr = listOf(
@@ -615,7 +628,7 @@ fun buildConfig(
             }
 
             route.rules.add(Rule_DefaultOptions().apply {
-                inbound = listOf("tun-in")
+                inbound = listOf(mainInboundTag)
                 outbound = mainProxyTag
             })
 
@@ -626,7 +639,7 @@ fun buildConfig(
 
             route.final_ = mainProxyTag
         } else {
-            // 应用用户规则
+            // 搴旂敤鐢ㄦ埛瑙勫垯
             for (rule in extraRules) {
                 if (rule.packages.isNotEmpty()) {
                     PackageCache.awaitLoadSync()
@@ -659,10 +672,10 @@ fun buildConfig(
                     
                     if (rule_set != null) generateRuleSet(rule_set, ruleSets)
                     
-		    // 存储ruleset标签和类型信息
+		    // 瀛樺偍ruleset鏍囩鍜岀被鍨嬩俊鎭?
                     val rulesetTags = mutableListOf<Pair<String, Boolean>>()
                     
-                    // 处理远程ruleset
+                    // 澶勭悊杩滅▼ruleset
                     if (rule.ruleset.isNotBlank()) {
                         val rulesetUrls = rule.ruleset.listByLineOrComma()
                         rulesetUrls.forEach { origUrl ->
@@ -723,7 +736,7 @@ fun buildConfig(
                             
                             if (rule_set != null && rulesetTags.isNotEmpty()) {
                                 for (tag in rule_set) {
-                                    // 只处理ruleset标签，且必须是非IP类型
+                                    // 鍙鐞唕uleset鏍囩锛屼笖蹇呴』鏄潪IP绫诲瀷
                                     val tagInfo = rulesetTags.find { it.first == tag }
                                     if (tag.startsWith("ruleset-") && tagInfo != null && !tagInfo.second) {
                                         userDNSRuleList += DNSRule_DefaultOptions().apply {
@@ -738,7 +751,7 @@ fun buildConfig(
                         0L -> {
                             if (useFakeDns) userDNSRuleList += makeDnsRuleObj().apply {
                                 server = "dns-fake"
-                                inbound = listOf("tun-in")
+                                inbound = listOf(mainInboundTag)
                                 query_type = listOf("A", "AAAA")
                             } else {
                                 userDNSRuleList += makeDnsRuleObj().apply {
@@ -754,7 +767,7 @@ fun buildConfig(
                                             userDNSRuleList += DNSRule_DefaultOptions().apply {
                                                 rule_set = mutableListOf(tag)
                                                 server = "dns-fake"
-                                                inbound = listOf("tun-in")
+                                                inbound = listOf(mainInboundTag)
                                                 query_type = listOf("A", "AAAA")
                                             }
                                         } else {
@@ -807,7 +820,7 @@ fun buildConfig(
                             Toast.LENGTH_LONG
                         ).show()
                     } else {
-                        // block 改用新的写法
+                        // block 鏀圭敤鏂扮殑鍐欐硶
                         if (ruleObj.outbound == TAG_BLOCK) {
                             ruleObj.outbound = null
                             ruleObj.action = "reject"
@@ -819,7 +832,7 @@ fun buildConfig(
             }
         }
 
-        // 对 rule_set tag 去重
+        // 瀵?rule_set tag 鍘婚噸
         if (route.rule_set != null) {
             route.rule_set = route.rule_set.distinctBy { it.tag }
         }
@@ -953,7 +966,7 @@ fun buildConfig(
                     strategy = "ipv4_only"
                 })
                 dns.rules.add(DNSRule_DefaultOptions().apply {
-                    inbound = listOf("tun-in")
+                    inbound = listOf(mainInboundTag)
                     server = "dns-fake"
                     disable_cache = true
                     query_type = listOf("A", "AAAA")
