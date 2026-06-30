@@ -9,7 +9,7 @@ import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
 import kotlinx.coroutines.runBlocking
 import moe.matsuri.nb4a.utils.JavaUtil
 
-class ProxyInstance(profile: ProxyEntity, var service: BaseService.Interface? = null) :
+open class ProxyInstance(profile: ProxyEntity, var service: BaseService.Interface? = null) :
     BoxInstance(profile) {
 
     var notTmp = true

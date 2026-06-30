@@ -21,10 +21,7 @@ import moe.matsuri.nb4a.tproxy.system.AndroidRootShellGateway
  * shell launches the bundled sing-box binary, so the daemon can keep running
  * even when the app is not in the foreground.
  */
-class TproxyInstance(
-    profile: ProxyEntity,
-    var service: BaseService.Interface? = null,
-) : ProxyInstance(profile, service) {
+class TproxyInstance(profile: ProxyEntity, service: BaseService.Interface? = null) : ProxyInstance(profile, service) {
 
     private val rootAccess = AndroidRootShellGateway()
     private var engine: RootModeEngine<*>? = null
