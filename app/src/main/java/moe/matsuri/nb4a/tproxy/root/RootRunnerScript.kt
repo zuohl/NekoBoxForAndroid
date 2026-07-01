@@ -98,8 +98,21 @@ fun RootStartConfig.buildStartDaemonCommand(): String {
             export SING_BOX_ASSET_PATH=$${runtimeLayout.dataDir.shellQuote()}
             ulimit -SHn 1000000 2>/dev/null || true
             chmod 755 $${setuidgidPath.shellQuote()}
+            echo "=== boxd start $$(date +%s) ===" >> $${coreLogPaths.errorLogPath.shellQuote()} 2>&1 || echo "CANNOT WRITE LOG $${coreLogPaths.errorLogPath.shellQuote()}" >&2
             $${setuidgidPath.shellQuote()} $${RootXrayUid.toString().shellQuote()} $${RootXrayGid.toString().shellQuote()} $${runtimeLayout.xrayCorePath.shellQuote()} run -c $${configPath.shellQuote()} >> $${coreLogPaths.errorLogPath.shellQuote()} 2>&1 < /dev/null &
-            echo $! > $${runtimeLayout.pidPath.shellQuote()}
+            boxd_pid=$$!
+            echo "$$boxd_pid" > $${runtimeLayout.pidPath.shellQuote()}
+            sleep 0.3
+            if ! kill -0 "$$boxd_pid" 2>/dev/null; then
+                wait "$$boxd_pid" 2>/dev/null
+                rc=$$?
+                echo "boxd exited immediately pid=$$boxd_pid rc=$$rc" >> $${coreLogPaths.errorLogPath.shellQuote()}
+                if [ "$$rc" -ge 128 ]; then
+                    echo "killed by signal $$((rc - 128))" >> $${coreLogPaths.errorLogPath.shellQuote()}
+                fi
+                echo "== log file size ==" >> $${coreLogPaths.errorLogPath.shellQuote()}
+                wc -c < $${coreLogPaths.errorLogPath.shellQuote()} >> $${coreLogPaths.errorLogPath.shellQuote()} 2>&1 || true
+            fi
             """,
         )
     }
