@@ -73,3 +73,9 @@ jobs:
         with:
           name: NekoBox
           path: ${{ env.APK }}
+      - name: Send to Telegram
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TG_BOT_TOKEN }}/sendDocument" \
+            -F "chat_id=${{ secrets.TG_CHAT_ID }}" \
+            -F "document=@${{ env.APK }}" \
+            -F "caption=NB4A Build arm64-v8a ${{ github.sha }}"
