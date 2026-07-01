@@ -94,6 +94,7 @@ fun RootStartConfig.buildStartDaemonCommand(): String {
             $$"""
             trap '' HUP
             cd $${runtimeLayout.dataDir.shellQuote()} || exit 1
+            mkdir -p ../cache 2>/dev/null || true
             export SING_BOX_ASSET_PATH=$${runtimeLayout.dataDir.shellQuote()}
             ulimit -SHn 1000000 2>/dev/null || true
             chmod 755 $${setuidgidPath.shellQuote()}
@@ -110,6 +111,7 @@ fun RootStartConfig.buildBootStartDaemonCommand(): String {
             $$"""
             trap '' HUP
             cd $${runtimeLayout.dataDir.shellQuote()} || exit 1
+            mkdir -p ../cache 2>/dev/null || true
             export SING_BOX_ASSET_PATH=$${runtimeLayout.dataDir.shellQuote()}
             ulimit -SHn 1000000 || true
             chmod 755 $${setuidgidPath.shellQuote()}
