@@ -40,6 +40,7 @@ import kotlinx.coroutines.sync.withLock
 class ServiceNotification(
     private val service: BaseService.Interface, title: String,
     channel: String, visible: Boolean = false,
+    private val foregroundServiceType: Int = FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED,
 ) : BroadcastReceiver() {
     companion object {
         const val notificationId = 1
@@ -191,7 +192,7 @@ class ServiceNotification(
                     (service as Service).startForeground(
                         notificationId,
                         it.build(),
-                        FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED
+                        foregroundServiceType
                     )
                 } else {
                     (service as Service).startForeground(notificationId, it.build())

@@ -3,6 +3,7 @@ package io.nekohasekai.sagernet.bg
 import android.annotation.SuppressLint
 import android.app.Service
 import android.content.Intent
+import android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE
 import android.os.PowerManager
 import io.nekohasekai.sagernet.SagerNet
 
@@ -17,7 +18,13 @@ class TproxyService : Service(), BaseService.Interface {
     override val data = BaseService.Data(this)
     override val tag: String get() = "SagerNetTproxyService"
     override fun createNotification(profileName: String): ServiceNotification =
-        ServiceNotification(this, profileName, "service-tproxy", true)
+        ServiceNotification(
+            this,
+            profileName,
+            "service-tproxy",
+            true,
+            FOREGROUND_SERVICE_TYPE_SPECIAL_USE,
+        )
 
     override var wakeLock: PowerManager.WakeLock? = null
     override var upstreamInterfaceName: String? = null
