@@ -44,10 +44,10 @@ class TproxyRootRunner(
         val command = $$"""
             pid="$(cat $${config.root.runtimeLayout.pidPath.shellQuote()} 2>/dev/null || true)"
             echo "== netstat =="
-            netstat -an 2>&1 | head -n 40 || true
+            netstat -an 2>&1 | head -n 60 || true
             echo "portHex=$$portHex"
             if [ -n "$pid" ]; then
-                for proc_file in /proc/"$pid"/net/tcp6 /proc/"$pid"/net/tcp; do
+                for proc_file in /proc/"$pid"/net/tcp6 /proc/"$pid"/net/tcp /proc/"$pid"/net/udp6 /proc/"$pid"/net/udp; do
                     echo "== $proc_file =="
                     head -n 12 "$proc_file" 2>&1 || true
                 done

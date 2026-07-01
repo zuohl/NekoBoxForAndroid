@@ -217,6 +217,9 @@ fun buildConfig(
                 4 -> "trace"
                 else -> "info"
             }
+            if (isTproxy) {
+                level = "debug"
+            }
         }
 
         dns = DNSOptions().apply {

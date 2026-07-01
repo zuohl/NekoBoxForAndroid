@@ -1,0 +1,1653 @@
+NekoBox for Android 1.4.2-mod-15 DEBUG (230)
+Date: 2026-07-01 15:27:12.138 UTC
+
+OS_VERSION: 6.12.23-android16-5-g75e9b1c7ae7c-abogki463945075-4k
+SDK_INT: 36
+RELEASE: 16
+ID: BP2A.250605.031.A3
+DISPLAY: BP2A.250605.031.A3
+INCREMENTAL: OS3.0.311.0.WPCCNXM
+SECURITY_PATCH: 2026-04-01
+IS_DEBUGGABLE: null
+IS_EMULATOR: null
+IS_TREBLE_ENABLED: true
+TYPE: user
+TAGS: release-keys
+
+MANUFACTURER: Xiaomi
+BRAND: Xiaomi
+MODEL: 25113PN0EC
+PRODUCT: pudding
+BOARD: canoe
+HARDWARE: qcom
+DEVICE: pudding
+SUPPORTED_ABIS: arm64-v8a
+
+Settings: 
+
+mixedPort: 2080
+nightTheme: 0
+tunImplementation: 0
+mtu: 1500
+speedInterval: 1000
+profileTrafficStatistics: true
+showDirectSpeed: true
+showGroupInNotification: false
+confirmProfileDelete: true
+alwaysShowAddress: false
+meteredNetwork: false
+acquireWakeLock: false
+hideFromRecentApps: false
+trafficSniffing: 1
+resolveDestination: false
+enableTLSFragment: false
+fragmentLength: 100-200
+fragmentInterval: 10-20
+remoteDns: https://dns.google/dns-query
+domain_strategy_for_remote: auto
+domain_strategy_for_direct: auto
+domain_strategy_for_server: auto
+enableDnsRouting: true
+strictRoute: true
+allowAccess: false
+connectionTestURL: http://www.gstatic.com/generate_204
+networkChangeResetConnections: true
+wakeResetConnections: false
+appTLSVersion: 1.2
+showBottomBar: false
+rulesUpdateInterval: 24h
+directDns: local
+concurrentDial: false
+bypassMode: false
+enableClashAPI: true
+logLevel: 1
+bypassLan: true
+bypassLanInCore: true
+appTheme: 6
+globalMode: false
+rulesGeositeUrl: https://github.com/zuohl/sing-geosite/releases/latest/download/geosite.db
+rulesGeoipUrl: https://cdn.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip.db
+globalAllowInsecure: false
+globalCustomConfig: 
+rulesProvider: 4
+appendHttpProxy: true
+allowInsecureOnRequest: true
+groupLayoutMode: 1
+yacdURL: https://board.zash.run.place/
+isAutoConnect: false
+enableFakeDns: false
+appLanguage: 
+ipv6Mode: 1
+individual: com.mfcloudcalculate.networkdisk
+im.xyz.browserx
+com.google.android.webview
+info.muge.appshare
+com.google.android.apps.authenticator2
+com.box.app
+com.openai.chatgpt
+com.microsoft.emmx
+li.songe.gkd
+com.github.android
+com.google.android.googlequicksearchbox
+com.google.earth
+com.google.android.apps.subscriptions.red
+com.android.vending
+com.google.android.gms
+com.google.android.gsf
+me.weishu.kernelsu
+bin.mt.plus
+com.pikcloud.pikpak
+org.telegram.messenger
+com.instagram.barcelona
+mark.via.gp
+com.twitter.android
+com.xbrowser.play
+com.google.android.youtube
+com.google.android.apps.docs
+com.jy.x.separation.manager
+com.youdao.note
+com.android.browser
+com.google.android.apps.photos
+com.google.android.apps.translate
+com.coolapk.market
+com.legado.app.release
+com.termux
+proxyApps: false
+httpProxyBypass: 
+serviceMode: tproxy
+tproxyRootBootScript: false
+tproxyRootIpv6Disabler: false
+tproxyRootAccessLog: false
+tproxyRootEbpf: true
+tproxyRootEbpfDirectBypass: true
+profileGroup: 5
+profileId: 19368
+profileCurrent: 19368
+
+Logcat: 
+
+--------- beginning of main
+07-01 23:26:13.690 30308 30308 D ViewRootImplStubImpl: onScrollToTop callback. Now is com.nb4a.debug
+--------- beginning of system
+07-01 23:26:13.690 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:13.695 30308 30308 E ViewRootImplStubImpl: No scrollable view found.
+07-01 23:26:13.834 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259408065, downTime=259408065, phoneEventTime=1782919573831 } moveCount:0
+07-01 23:26:13.834 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:13.893 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259408125, downTime=259408065, phoneEventTime=1782919573891 } moveCount:0
+07-01 23:26:14.131 30308 30308 W BpBinder: Large outgoing transaction of 21556 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:14.280 30308 30308 W BpBinder: Large outgoing transaction of 21556 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:14.418 30308 30308 W BpBinder: Large outgoing transaction of 21472 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:14.576 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259408809, downTime=259408809, phoneEventTime=1782919574575 } moveCount:0
+07-01 23:26:14.576 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:14.604 30308 30308 W BpBinder: Large outgoing transaction of 21568 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:14.642 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259408875, downTime=259408809, phoneEventTime=1782919574641 } moveCount:0
+07-01 23:26:14.692 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:14.693 30308 30308 W TabLayout: MODE_SCROLLABLE + GRAVITY_FILL is not supported, GRAVITY_START will be used instead
+07-01 23:26:14.694 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:14.702 30308 30308 D AutofillManager: view not autofillable - not passing ime action check
+07-01 23:26:14.732 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:14.736 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:14.739 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:14.741 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:14.763 30308 30308 I HandWritingStubImpl: refreshLastKeyboardType: 1
+07-01 23:26:14.763 30308 30308 I HandWritingStubImpl: getCurrentKeyboardType: 1
+07-01 23:26:15.073 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:15.083 30308  6038 I SKIA    : CreateGraphicsPipeline pipeline cache hit. elpased time: 0.23 ms.
+07-01 23:26:15.083 30308  6038 I SKIA    : CreateGraphicsPipeline pipeline cache hit. elpased time: 0.14 ms.
+07-01 23:26:15.584 30308 30308 W BpBinder: Large outgoing transaction of 20268 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:15.754 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259409986, downTime=259409986, phoneEventTime=1782919575752 } moveCount:0
+07-01 23:26:15.755 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:15.784 30308 30308 W BpBinder: Large outgoing transaction of 20268 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:15.833 30308  5799 I com.nb4a.debug: This is sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:26:15.835 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259410066, downTime=259409986, phoneEventTime=1782919575832 } moveCount:6
+07-01 23:26:15.836 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:15.890 30308 30308 W BpBinder: Large outgoing transaction of 20256 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:16.135 30308 30308 I HandWritingStubImpl: refreshLastKeyboardType: 1
+07-01 23:26:16.135 30308 30308 I HandWritingStubImpl: getCurrentKeyboardType: 1
+07-01 23:26:16.392 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259410624, downTime=259410624, phoneEventTime=1782919576390 } moveCount:0
+07-01 23:26:16.393 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:16.496 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259410728, downTime=259410624, phoneEventTime=1782919576494 } moveCount:9
+07-01 23:26:16.496 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:26:16.799 30308 30308 I HandWritingStubImpl: refreshLastKeyboardType: 1
+07-01 23:26:16.799 30308 30308 I HandWritingStubImpl: getCurrentKeyboardType: 1
+07-01 23:26:17.151 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259411383, downTime=259411383, phoneEventTime=1782919577149 } moveCount:0
+07-01 23:26:17.152 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:17.269 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259411501, downTime=259411383, phoneEventTime=1782919577267 } moveCount:11
+07-01 23:26:18.609 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259412839, downTime=259412839, phoneEventTime=1782919578605 } moveCount:0
+07-01 23:26:18.609 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:18.672 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259412904, downTime=259412839, phoneEventTime=1782919578670 } moveCount:0
+07-01 23:26:18.692 30308  6038 I SKIA    : CreateGraphicsPipeline pipeline cache hit. elpased time: 0.73 ms.
+07-01 23:26:19.868 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259414099, downTime=259414099, phoneEventTime=1782919579865 } moveCount:0
+07-01 23:26:19.869 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:19.919 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259414150, downTime=259414099, phoneEventTime=1782919579916 } moveCount:0
+07-01 23:26:20.470 30308 30308 W BpBinder: Large outgoing transaction of 20264 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:29.333  6046  6046 W BpBinder: Large outgoing transaction of 17456 bytes, interface descriptor io.nekohasekai.sagernet.aidl.ISagerNetServiceCallback, code 1 was sent
+07-01 23:26:33.428 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259427659, downTime=259427659, phoneEventTime=1782919593425 } moveCount:0
+07-01 23:26:33.428 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:26:33.482 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259427710, downTime=259427659, phoneEventTime=1782919593476 } moveCount:0
+07-01 23:26:33.516  6046  6087 I m.nb4a.debug:bg: This is sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:26:42.781  6046  6046 W BpBinder: Large outgoing transaction of 17456 bytes, interface descriptor io.nekohasekai.sagernet.aidl.ISagerNetServiceCallback, code 1 was sent
+07-01 23:26:43.813 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:26:43.897 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:26:45.347 30308  6069 I ContentCatcher: SettingTrigger : unregister status observer io.nekohasekai.sagernet.ui.MainActivity
+07-01 23:26:45.348 30308  6069 I ContentCatcher: SettingTrigger : unregisterUIAgentListener io.nekohasekai.sagernet.ui.MainActivity, uid:10608
+07-01 23:26:50.832 30308 30308 I HandWritingStubImpl: refreshLastKeyboardType: 1
+07-01 23:26:50.832 30308 30308 I HandWritingStubImpl: getCurrentKeyboardType: 1
+07-01 23:26:50.842 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:26:50.842 30308 30308 D Activity: Activity = ActivityInfo{c163e5b io.nekohasekai.sagernet.ui.MainActivity}, Resume onConfigurationChanged = {1.0 460mcc11mnc [zh_CN] ldltr sw375dp w375dp h817dp 520dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1220, 2656) mAppBounds=Rect(0, 0 - 1220, 2656) mMaxBounds=Rect(0, 0 - 1220, 2656) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+07-01 23:26:50.842 30308  6069 I ContentCatcher: SettingTrigger : register screen QA status observer io.nekohasekai.sagernet.ui.MainActivity
+07-01 23:26:50.842 30308  6069 I ContentCatcher: SettingTrigger : register global collect status observer io.nekohasekai.sagernet.ui.MainActivity
+07-01 23:26:50.843 30308  6069 I ContentCatcher: SettingTrigger : registerUIAgentListener io.nekohasekai.sagernet.ui.MainActivity, uid:10608
+07-01 23:26:50.849 30308 30308 D InsetsController: hide(ime(), fromIme=false)
+07-01 23:26:50.849 30308 30308 I ImeTracker: com.nb4a.debug:f4fcc80a: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+07-01 23:26:50.858 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:26:50.907 30308 30308 W BpBinder: Large outgoing transaction of 20260 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:51.013 30308 30308 W BpBinder: Large outgoing transaction of 20260 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:26:51.671 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:26:52.461 30308  6069 I ContentCatcher: SettingTrigger : unregister status observer io.nekohasekai.sagernet.ui.MainActivity
+07-01 23:26:52.462 30308  6069 I ContentCatcher: SettingTrigger : unregisterUIAgentListener io.nekohasekai.sagernet.ui.MainActivity, uid:10608
+07-01 23:26:52.483 30308  6038 D BufferQueueProducer: [VRI[MainActivity]#0(BLAST Consumer)0](id:766400000000,api:1,p:30308,c:30308) disconnect: api 1 (caller=30308)
+07-01 23:26:52.484 30308  6038 D BufferQueueConsumer: [VRI[MainActivity]#0(BLAST Consumer)0](id:766400000000,api:0,p:-1,c:30308) disconnect: caller 30308
+07-01 23:26:52.484 30308  6038 W com.nb4a.debug: Binder 0xb4000077250363a0 destroyed after setInheritRt before being parceled.
+07-01 23:26:52.490 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:26:52.495 30308  5799 I com.nb4a.debug: This is non sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:26:52.495 30308 30308 W BpBinder: Large outgoing transaction of 18740 bytes, interface descriptor android.app.IActivityClientController, code 6 was sent
+07-01 23:26:52.497 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:27:03.877 30308 30308 D Activity: Activity = ActivityInfo{c163e5b io.nekohasekai.sagernet.ui.MainActivity}, Resume onConfigurationChanged = {1.0 460mcc11mnc [zh_CN] ldltr sw375dp w375dp h817dp 520dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1220, 2656) mAppBounds=Rect(0, 0 - 1220, 2656) mMaxBounds=Rect(0, 0 - 1220, 2656) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+07-01 23:27:03.879 30308  6069 I ContentCatcher: SettingTrigger : register screen QA status observer io.nekohasekai.sagernet.ui.MainActivity
+07-01 23:27:03.884 30308  6069 I ContentCatcher: SettingTrigger : register global collect status observer io.nekohasekai.sagernet.ui.MainActivity
+07-01 23:27:03.884 30308  6069 I ContentCatcher: SettingTrigger : registerUIAgentListener io.nekohasekai.sagernet.ui.MainActivity, uid:10608
+07-01 23:27:03.894 30308 30308 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#2
+07-01 23:27:03.915 30308 30308 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 1220, 2656)
+07-01 23:27:03.922 30308 30308 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#4
+07-01 23:27:03.923 30308 30308 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 1220, 2656)
+07-01 23:27:03.925 30308 30308 W BpBinder: Large outgoing transaction of 20260 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:03.933 30308 30308 I HandWritingStubImpl: refreshLastKeyboardType: 1
+07-01 23:27:03.933 30308 30308 I HandWritingStubImpl: getCurrentKeyboardType: 1
+07-01 23:27:03.934 30308 30308 D InsetsController: hide(ime(), fromIme=false)
+07-01 23:27:03.934 30308 30308 I ImeTracker: com.nb4a.debug:cf2020bd: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+07-01 23:27:03.950 30308 30308 I ImeTracker: system_server:5d6c6e4d: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+07-01 23:27:04.270 30308 30308 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+07-01 23:27:04.531 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259458763, downTime=259458763, phoneEventTime=1782919624529 } moveCount:0
+07-01 23:27:04.531 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:27:04.583 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259458815, downTime=259458763, phoneEventTime=1782919624581 } moveCount:0
+07-01 23:27:05.675 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259459906, downTime=259459906, phoneEventTime=1782919625672 } moveCount:0
+07-01 23:27:05.675 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:27:05.726 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259459958, downTime=259459906, phoneEventTime=1782919625724 } moveCount:0
+07-01 23:27:05.770 30308 30308 D ScrollerOptimizationManager: registerConfigChangedListener
+07-01 23:27:05.819 30308 30308 W BpBinder: Large outgoing transaction of 67420 bytes, interface descriptor android.view.accessibility.IAccessibilityManager, code 2 was sent
+07-01 23:27:05.820 30308 30308 D AutofillManager: view not autofillable - not passing ime action check
+07-01 23:27:05.820 30308 30308 D AutofillManager: view not autofillable - not passing ime action check
+07-01 23:27:05.832 30308 30308 W BpBinder: Large outgoing transaction of 72360 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:05.978 30308 30308 I HandWritingStubImpl: refreshLastKeyboardType: 1
+07-01 23:27:05.979 30308 30308 I ImeTracker: com.nb4a.debug:a3d41b0d: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_CLOSE_CURRENT_SESSION fromUser false
+07-01 23:27:05.979 30308 30308 D InsetsController: hide(ime(), fromIme=false)
+07-01 23:27:05.979 30308 30308 I ImeTracker: com.nb4a.debug:a3d41b0d: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+07-01 23:27:06.168 30308 30308 W BpBinder: Large outgoing transaction of 67904 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 1 was sent
+07-01 23:27:06.326 30308 30308 W BpBinder: Large outgoing transaction of 67904 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 1 was sent
+07-01 23:27:06.542 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:06.655 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259460886, downTime=259460886, phoneEventTime=1782919626652 } moveCount:0
+07-01 23:27:06.655 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:27:06.657 30308 30308 D Editor  : Double tap detection is fail
+07-01 23:27:06.713 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:06.771 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259461004, downTime=259460886, phoneEventTime=1782919626770 } moveCount:9
+07-01 23:27:06.883 30308 30308 W BpBinder: Large outgoing transaction of 74648 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:06.895 30308 30308 W BpBinder: Large outgoing transaction of 76900 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:06.926 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:06.941 30308  5799 I com.nb4a.debug: This is sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:27:06.953 30308 30308 W BpBinder: Large outgoing transaction of 74648 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:06.992 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259461221, downTime=259461221, phoneEventTime=1782919626987 } moveCount:0
+07-01 23:27:06.993 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:27:07.116 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:07.174 30308 30308 W BpBinder: Large outgoing transaction of 67904 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 1 was sent
+07-01 23:27:07.215 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:07.249 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259461482, downTime=259461221, phoneEventTime=1782919627248 } moveCount:27
+07-01 23:27:07.251 30308 30308 D SplineOverScroller: The app has set the same refresh rate
+07-01 23:27:07.293 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:07.344 30308 30308 W BpBinder: Large outgoing transaction of 74648 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:07.379 30308 30308 W BpBinder: Large outgoing transaction of 67904 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 1 was sent
+07-01 23:27:07.444 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:07.615 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:07.674 30308  5799 I com.nb4a.debug: This is non sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:27:07.839 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:08.020 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:08.291 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:08.411 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:08.701 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:08.762 30308 30308 W BpBinder: Large outgoing transaction of 76900 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 3 was sent
+07-01 23:27:08.812 30308  5799 I com.nb4a.debug: This is sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:27:08.813 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:09.109 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:09.515 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:09.919 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:10.314 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:10.728 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:11.130 30308  5799 I com.nb4a.debug: This is non sticky GC, maxfree is 33554432 minfree is 8388608
+07-01 23:27:11.139 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:11.549 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:11.932 30308 30308 W BpBinder: Large outgoing transaction of 67908 bytes, interface descriptor android.view.accessibility.IAccessibilityInteractionConnectionCallback, code 2 was sent
+07-01 23:27:12.033 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=259466264, downTime=259466264, phoneEventTime=1782919632030 } moveCount:0
+07-01 23:27:12.033 30308 30308 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+07-01 23:27:12.121 30308 30308 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.nb4a.debug/io.nekohasekai.sagernet.ui.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=259466353, downTime=259466264, phoneEventTime=1782919632119 } moveCount:0
+
+
+2026/07/01 15:26:20 [Debug] [ProxyInstance] {
+  "dns": {
+    "final": "dns-remote",
+    "independent_cache": true,
+    "rules": [
+      {
+        "domain": [
+          "dns.google",
+          "cloudflare.182682.xyz"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "disable_cache": true,
+        "rule_set": [
+          "ruleset-638804063"
+        ],
+        "server": "dns-block"
+      },
+      {
+        "domain_suffix": [
+          "googleapis.cn",
+          "xn--ngstr-lra8j.com",
+          "xn--ngstr-cn-8za9o.com"
+        ],
+        "server": "dns-remote"
+      },
+      {
+        "domain_suffix": [
+          "cn.bing.com",
+          "board.zash.run.place",
+          "sf-express.com",
+          "infini-cloud.net",
+          "app.sharess.cn",
+          "sharess.cn",
+          "*.cn"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "ruleset-1139705257"
+        ],
+        "server": "dns-direct"
+      }
+    ],
+    "servers": [
+      {
+        "address": "rcode://success",
+        "tag": "dns-block"
+      },
+      {
+        "address": "local",
+        "detour": "direct",
+        "tag": "dns-local"
+      },
+      {
+        "address": "local",
+        "address_resolver": "dns-local",
+        "detour": "direct",
+        "strategy": "prefer_ipv4",
+        "tag": "dns-direct"
+      },
+      {
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "dns-direct",
+        "strategy": "prefer_ipv4",
+        "tag": "dns-remote"
+      }
+    ]
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "../cache/cache.db",
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "../files/yacd"
+    }
+  },
+  "inbounds": [
+    {
+      "domain_strategy": "",
+      "listen": "::",
+      "listen_port": 65535,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "tag": "tproxy-in",
+      "type": "tproxy"
+    },
+    {
+      "domain_strategy": "",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "tag": "mixed-in",
+      "type": "mixed"
+    }
+  ],
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "domain_strategy": "prefer_ipv4",
+      "packet_encoding": "xudp",
+      "server": "172.64.52.234",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz"
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz"
+        },
+        "max_early_data": 2560,
+        "path": "/proxyip=ProxyIP.CA.CMLiussss.net",
+        "type": "ws"
+      },
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "CF-4 6",
+      "type": "vless"
+    },
+    {
+      "domain_strategy": "prefer_ipv4",
+      "packet_encoding": "",
+      "server": "cloudflare.182682.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "blog.zuohl.top"
+      },
+      "transport": {
+        "headers": {
+          "Host": "blog.zuohl.top"
+        },
+        "path": "/hotdog",
+        "type": "ws"
+      },
+      "uuid": "511592c7-3d4b-a8f8-db3f-f8fa22b27e0a",
+      "tag": "vless-blog",
+      "type": "vless"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "bypass",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
+    "rule_set": [
+      {
+        "format": "binary",
+        "tag": "ruleset-638804063",
+        "type": "remote",
+        "update_interval": "24h",
+        "url": "https://raw.githubusercontent.com/Yuu518/sing-box-rules/rule_set/rule_set_site/category-ads-all.srs"
+      },
+      {
+        "format": "binary",
+        "tag": "ruleset-1139705257",
+        "type": "remote",
+        "update_interval": "24h",
+        "url": "https://raw.githubusercontent.com/Yuu518/sing-box-rules/rule_set/rule_set_site/cn.srs"
+      },
+      {
+        "format": "binary",
+        "tag": "ruleset-2098364425",
+        "type": "remote",
+        "update_interval": "24h",
+        "url": "https://raw.githubusercontent.com/Yuu518/sing-box-rules/rule_set/rule_set_ip/cn.srs"
+      }
+    ],
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "port": [
+          53
+        ]
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": [
+          "dns"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "ruleset-638804063"
+        ]
+      },
+      {
+        "domain_suffix": [
+          "googleapis.cn",
+          "xn--ngstr-lra8j.com",
+          "xn--ngstr-cn-8za9o.com"
+        ],
+        "outbound": "CF-4 6"
+      },
+      {
+        "domain_suffix": [
+          "cn.bing.com",
+          "board.zash.run.place",
+          "sf-express.com",
+          "infini-cloud.net",
+          "app.sharess.cn",
+          "sharess.cn",
+          "*.cn"
+        ],
+        "outbound": "bypass"
+      },
+      {
+        "domain_suffix": [
+          "copilot.microsoft.com",
+          "openai.com",
+          "x.com",
+          "cloudflare.com",
+          "linux.do",
+          "*.sagernet.org",
+          "chatgpt.com",
+          "openai.com",
+          "auth.openai.com"
+        ],
+        "outbound": "vless-blog"
+      },
+      {
+        "outbound": "bypass",
+        "rule_set": [
+          "ruleset-1139705257",
+          "ruleset-2098364425"
+        ]
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "bypass"
+      },
+      {
+        "action": "reject",
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
+      }
+    ]
+  }
+}
+2026/07/01 15:26:20 [Debug] [ProxyInstance] {
+  "vless-blog": [
+    {
+      "error": "Get \"http://www.gstatic.com/generate_204\": context deadline exceeded",
+      "groupId": 1,
+      "id": 19127,
+      "ping": 443,
+      "rx": 3615954256,
+      "status": 1,
+      "tx": 138759350,
+      "type": 4,
+      "userOrder": 5,
+      "uuid": "",
+      "vmessBean": {
+        "alterId": -1,
+        "allowInsecure": false,
+        "alpn": "",
+        "certificates": "",
+        "earlyDataHeaderName": "",
+        "echConfig": "",
+        "enableECH": false,
+        "enableMux": false,
+        "encryption": "",
+        "headerType": "none",
+        "host": "blog.zuohl.top",
+        "mKcpSeed": "",
+        "muxBrutal": false,
+        "muxBrutalDownMbps": 100,
+        "muxBrutalUpMbps": 100,
+        "muxConcurrency": 1,
+        "muxMaxConnections": 4,
+        "muxMinStreams": 4,
+        "muxMode": 0,
+        "muxPadding": false,
+        "muxType": 0,
+        "packetEncoding": 0,
+        "path": "/hotdog",
+        "realityPubKey": "",
+        "realityShortId": "",
+        "security": "tls",
+        "sni": "blog.zuohl.top",
+        "type": "ws",
+        "utlsFingerprint": "",
+        "uuid": "511592c7-3d4b-a8f8-db3f-f8fa22b27e0a",
+        "vlessEncryption": "",
+        "wsMaxEarlyData": 0,
+        "xhttpExtra": "",
+        "xhttpMode": "auto",
+        "customConfigJson": "",
+        "customOutboundJson": "",
+        "name": "vless-blog",
+        "serverAddress": "cloudflare.182682.xyz",
+        "serverPort": 443
+      }
+    }
+  ],
+  "CF-4 6": [
+    {
+      "error": "Get \"http://www.gstatic.com/generate_204\": unexpected HTTP response status: 500",
+      "groupId": 5,
+      "id": 19368,
+      "ping": 188,
+      "rx": 0,
+      "status": 1,
+      "tx": 0,
+      "type": 4,
+      "userOrder": 49,
+      "uuid": "",
+      "vmessBean": {
+        "alterId": -1,
+        "allowInsecure": false,
+        "alpn": "",
+        "certificates": "",
+        "earlyDataHeaderName": "",
+        "echConfig": "",
+        "enableECH": false,
+        "enableMux": false,
+        "encryption": "",
+        "headerType": "none",
+        "host": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz",
+        "mKcpSeed": "",
+        "muxBrutal": false,
+        "muxBrutalDownMbps": 100,
+        "muxBrutalUpMbps": 100,
+        "muxConcurrency": 8,
+        "muxMaxConnections": 4,
+        "muxMinStreams": 4,
+        "muxMode": 0,
+        "muxPadding": false,
+        "muxType": 0,
+        "packetEncoding": 2,
+        "path": "/proxyip=ProxyIP.CA.CMLiussss.net?ed=2560",
+        "realityPubKey": "",
+        "realityShortId": "",
+        "security": "tls",
+        "sni": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz",
+        "type": "ws",
+        "utlsFingerprint": "",
+        "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+        "vlessEncryption": "",
+        "wsMaxEarlyData": 0,
+        "xhttpExtra": "",
+        "xhttpMode": "auto",
+        "customConfigJson": "",
+        "customOutboundJson": "",
+        "name": "CF-4 6",
+        "serverAddress": "172.64.52.234",
+        "serverPort": 443
+      }
+    }
+  ]
+}
+2026/07/01 15:26:28 [Error] [AndroidAppLogger] [NekoTproxy] Failed to start TPROXY mode
+java.lang.IllegalStateException: Xray-core started but tproxy-in port 65535 is not ready
+pid=11378
+cmdline=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so run -c /data/user/0/com.nb4a.debug/files/tproxy-root/config-root.json 
+exe=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so
+Uid:	0	0	0	0
+Gid:	3005	3005	3005	3005
+== netstat ==
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:24022           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:24021           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:51922         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:2080          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:59739         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:20017         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.31.111:52039    115.170.254.25:5260     ESTABLISHED
+tcp        0      0 192.168.31.111:48112    61.184.9.206:443        ESTABLISHED
+tcp        0      0 192.168.31.111:57914    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53522    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36058         ESTABLISHED
+tcp        0      0 192.168.31.111:53918    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:57924    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:59160         127.0.0.1:2080          ESTABLISHED
+tcp       87      0 127.0.0.1:32910         127.0.0.1:2080          CLOSE_WAIT 
+tcp        0      0 192.168.31.111:55044    104.18.42.163:443       ESTABLISHED
+tcp       24      0 10.190.18.17:46792      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:54724    120.233.18.62:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53508    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:53488    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59170         ESTABLISHED
+tcp        0      0 172.19.0.1:42896        172.64.52.234:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59160         ESTABLISHED
+tcp        0      0 192.168.31.111:34578    120.221.25.34:9090      TIME_WAIT  
+tcp        0      0 192.168.31.111:53510    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53496    172.64.145.93:443       TIME_WAIT  
+tcp       32      0 10.190.18.17:43054      220.181.106.104:443     CLOSE_WAIT 
+tcp        0      0 127.0.0.1:59170         127.0.0.1:2080          ESTABLISHED
+tcp       24      0 10.190.18.17:46788      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:53922    172.64.145.93:443       TIME_WAIT  
+tcp        0    324 192.168.31.111:53920    172.64.145.93:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42912        172.64.52.234:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36044         ESTABLISHED
+tcp        0      0 192.168.31.111:58872    120.233.18.62:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42914        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:40326    120.233.18.62:443       ESTABLISHED
+tcp6       0      0 ::ffff:127.0.0.1:40717  [::]:*                  LISTEN     
+portHex=:FFFF 
+== /proc/11378/net/tcp6 ==
+  sl  local_address                         remote_address                        st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+   0: 0000000000000000FFFF00000100007F:9F0D 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10308        0 276256862 1 0000000000000000 100 0 0 10 0
+   1: 0000000000000000FFFF00000100007F:887B 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278174753 1 0000000000000000 100 0 0 10 0
+   2: 00000000000000000000000000000000:A925 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 274229485 1 0000000000000000 100 0 0 10 0
+   3: 4C8A092491C3C00CFC778EB89E11C6E5:DD4A 4D8C0924650000520000380004000000:0050 08 00000000:00000001 00:00000000 00000000 10307        0 271458093 1 0000000000000000 21 4 0 10 1400
+   4: 0000000000000000FFFF00000100007F:8CDA 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278174172 1 0000000000000000 20 4 30 10 1400
+   5: 0000000000000000FFFF00006F1FA8C0:8288 0000000000000000FFFF000035773E6F:01BB 01 00000000:00000000 00:00000000 00000000 10142        0 278205446 1 0000000000000000 23 4 33 10 1400
+   6: 4C8A092491C3C00CFC778EB89E11C6E5:E9C2 508C09249046000A0000030015000000:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277925625 1 0000000000000000 24 4 26 10 1400
+   7: 0000000000000000FFFF00006F1FA8C0:D972 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 277994319 1 0000000000000000 24 4 28 10 1400
+   8: 0000000000000000FFFF00000100007F:8CCC 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278164389 1 0000000000000000 20 4 30 10 1400
+   9: 0000000000000000FFFF00006F1FA8C0:98C0 0000000000000000FFFF0000628D0D6F:01BB 01 00000000:00000000 00:00000000 00000000 10218        0 278170690 1 0000000000000000 24 4 32 10 1400
+  10: 0000000000000000FFFF0000010013AC:97F6 0000000000000000FFFF0000BC2BC2AD:146C 01 00000000:00000000 00:00000000 00000000 10140        0 277341628 1 0000000000000000 20 4 31 10 1400
+== /proc/11378/net/tcp ==
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:5DD6 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277617671 1 0000000000000000 100 0 0 10 0                 
+   1: 00000000:5DD5 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277598301 1 0000000000000000 100 0 0 10 0                 
+   2: 0100007F:CAD2 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278179011 1 0000000000000000 100 0 0 10 0                 
+   3: 0100007F:0820 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277332093 1 0000000000000000 100 0 0 10 0                 
+   4: 0100007F:E95B 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10576        0 181994042 1 0000000000000000 100 0 0 10 0                 
+   5: 0100007F:4E31 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278178953 1 0000000000000000 100 0 0 10 0                 
+   6: 0100007F:2382 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277347104 1 0000000000000000 100 0 0 10 0                 
+   7: 6F1FA8C0:CB47 19FEAA73:148C 01 00000000:00000000 00:00000000 00000000 10147        0 277344753 1 0000000000000000 37 4 30 10 1400              
+   8: 6F1FA8C0:BBF0 CE09B83D:01BB 01 00000000:00000000 00:00000000 00000000 10576        0 277393258 1 0000000000000000 25 4 30 10 1400              
+   9: 6F1FA8C0:E23A 5D9140AC:01BB 01 00000000:00000000 02:0000D2BD 00000000 10394        0 278174183 2 0000000000000000 29 4 32 10 1400              
+  10: 6F1FA8C0:D112 5D9140AC:01BB 01 00000000:00000000 02:0000CB61 00000000 10394        0 278087553 2 0000000000000000 237 4 19 10 1400
+=== boxd start 1782919581 ===
+[33mWARN[0m[0000] legacy DNS servers is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-to-new-dns-server-formats
+[33mWARN[0m[0000] outbound DNS rule item is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] missing `route.default_domain_resolver` or `domain_resolver` in dial fields is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] legacy domain strategy options is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-domain-strategy-options
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.failStartup(RootModeRunner.kt:176)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.access$failStartup(RootModeRunner.kt:18)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner$start$2.invokeSuspend(RootModeRunner.kt:46)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+2026/07/01 15:26:28 [Warning] [BaseService$Interface$onStartCommand$1] java.lang.IllegalStateException: Failed to start TPROXY mode: Xray-core started but tproxy-in port 65535 is not ready
+pid=11378
+cmdline=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so run -c /data/user/0/com.nb4a.debug/files/tproxy-root/config-root.json 
+exe=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so
+Uid:	0	0	0	0
+Gid:	3005	3005	3005	3005
+== netstat ==
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:24022           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:24021           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:51922         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:2080          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:59739         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:20017         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.31.111:52039    115.170.254.25:5260     ESTABLISHED
+tcp        0      0 192.168.31.111:48112    61.184.9.206:443        ESTABLISHED
+tcp        0      0 192.168.31.111:57914    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53522    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36058         ESTABLISHED
+tcp        0      0 192.168.31.111:53918    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:57924    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:59160         127.0.0.1:2080          ESTABLISHED
+tcp       87      0 127.0.0.1:32910         127.0.0.1:2080          CLOSE_WAIT 
+tcp        0      0 192.168.31.111:55044    104.18.42.163:443       ESTABLISHED
+tcp       24      0 10.190.18.17:46792      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:54724    120.233.18.62:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53508    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:53488    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59170         ESTABLISHED
+tcp        0      0 172.19.0.1:42896        172.64.52.234:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59160         ESTABLISHED
+tcp        0      0 192.168.31.111:34578    120.221.25.34:9090      TIME_WAIT  
+tcp        0      0 192.168.31.111:53510    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53496    172.64.145.93:443       TIME_WAIT  
+tcp       32      0 10.190.18.17:43054      220.181.106.104:443     CLOSE_WAIT 
+tcp        0      0 127.0.0.1:59170         127.0.0.1:2080          ESTABLISHED
+tcp       24      0 10.190.18.17:46788      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:53922    172.64.145.93:443       TIME_WAIT  
+tcp        0    324 192.168.31.111:53920    172.64.145.93:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42912        172.64.52.234:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36044         ESTABLISHED
+tcp        0      0 192.168.31.111:58872    120.233.18.62:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42914        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:40326    120.233.18.62:443       ESTABLISHED
+tcp6       0      0 ::ffff:127.0.0.1:40717  [::]:*                  LISTEN     
+portHex=:FFFF 
+== /proc/11378/net/tcp6 ==
+  sl  local_address                         remote_address                        st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+   0: 0000000000000000FFFF00000100007F:9F0D 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10308        0 276256862 1 0000000000000000 100 0 0 10 0
+   1: 0000000000000000FFFF00000100007F:887B 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278174753 1 0000000000000000 100 0 0 10 0
+   2: 00000000000000000000000000000000:A925 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 274229485 1 0000000000000000 100 0 0 10 0
+   3: 4C8A092491C3C00CFC778EB89E11C6E5:DD4A 4D8C0924650000520000380004000000:0050 08 00000000:00000001 00:00000000 00000000 10307        0 271458093 1 0000000000000000 21 4 0 10 1400
+   4: 0000000000000000FFFF00000100007F:8CDA 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278174172 1 0000000000000000 20 4 30 10 1400
+   5: 0000000000000000FFFF00006F1FA8C0:8288 0000000000000000FFFF000035773E6F:01BB 01 00000000:00000000 00:00000000 00000000 10142        0 278205446 1 0000000000000000 23 4 33 10 1400
+   6: 4C8A092491C3C00CFC778EB89E11C6E5:E9C2 508C09249046000A0000030015000000:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277925625 1 0000000000000000 24 4 26 10 1400
+   7: 0000000000000000FFFF00006F1FA8C0:D972 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 277994319 1 0000000000000000 24 4 28 10 1400
+   8: 0000000000000000FFFF00000100007F:8CCC 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278164389 1 0000000000000000 20 4 30 10 1400
+   9: 0000000000000000FFFF00006F1FA8C0:98C0 0000000000000000FFFF0000628D0D6F:01BB 01 00000000:00000000 00:00000000 00000000 10218        0 278170690 1 0000000000000000 24 4 32 10 1400
+  10: 0000000000000000FFFF0000010013AC:97F6 0000000000000000FFFF0000BC2BC2AD:146C 01 00000000:00000000 00:00000000 00000000 10140        0 277341628 1 0000000000000000 20 4 31 10 1400
+== /proc/11378/net/tcp ==
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:5DD6 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277617671 1 0000000000000000 100 0 0 10 0                 
+   1: 00000000:5DD5 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277598301 1 0000000000000000 100 0 0 10 0                 
+   2: 0100007F:CAD2 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278179011 1 0000000000000000 100 0 0 10 0                 
+   3: 0100007F:0820 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277332093 1 0000000000000000 100 0 0 10 0                 
+   4: 0100007F:E95B 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10576        0 181994042 1 0000000000000000 100 0 0 10 0                 
+   5: 0100007F:4E31 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278178953 1 0000000000000000 100 0 0 10 0                 
+   6: 0100007F:2382 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277347104 1 0000000000000000 100 0 0 10 0                 
+   7: 6F1FA8C0:CB47 19FEAA73:148C 01 00000000:00000000 00:00000000 00000000 10147        0 277344753 1 0000000000000000 37 4 30 10 1400              
+   8: 6F1FA8C0:BBF0 CE09B83D:01BB 01 00000000:00000000 00:00000000 00000000 10576        0 277393258 1 0000000000000000 25 4 30 10 1400              
+   9: 6F1FA8C0:E23A 5D9140AC:01BB 01 00000000:00000000 02:0000D2BD 00000000 10394        0 278174183 2 0000000000000000 29 4 32 10 1400              
+  10: 6F1FA8C0:D112 5D9140AC:01BB 01 00000000:00000000 02:0000CB61 00000000 10394        0 278087553 2 0000000000000000 237 4 19 10 1400
+=== boxd start 1782919581 ===
+[33mWARN[0m[0000] legacy DNS servers is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-to-new-dns-server-formats
+[33mWARN[0m[0000] outbound DNS rule item is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] missing `route.default_domain_resolver` or `domain_resolver` in dial fields is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] legacy domain strategy options is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-domain-strategy-options
+	at moe.matsuri.nb4a.tproxy.root.RootModeEngine.start(RootModeEngine.kt:55)
+	at moe.matsuri.nb4a.tproxy.root.RootModeEngine$start$1.invokeSuspend(Unknown Source:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at io.nekohasekai.sagernet.bg.proto.TproxyInstance.launch(TproxyInstance.kt:45)
+	at io.nekohasekai.sagernet.bg.BaseService$Interface$DefaultImpls.startProcesses(BaseService.kt:217)
+	at io.nekohasekai.sagernet.bg.TproxyService.startProcesses(TproxyService.kt:17)
+	at io.nekohasekai.sagernet.bg.BaseService$Interface$onStartCommand$1.invokeSuspend(BaseService.kt:380)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:367)
+	at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable(Cancellable.kt:30)
+	at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable$default(Cancellable.kt:25)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:110)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch$default(Builders.common.kt:47)
+	at kotlinx.coroutines.BuildersKt.launch$default(Unknown Source:1)
+	at io.nekohasekai.sagernet.ktx.AsyncsKt.runOnMainDispatcher(Asyncs.kt:29)
+	at io.nekohasekai.sagernet.bg.BaseService$Interface$DefaultImpls.onStartCommand(BaseService.kt:366)
+	at io.nekohasekai.sagernet.bg.TproxyService.onStartCommand(TproxyService.kt:40)
+	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5955)
+	at android.app.ActivityThread.-$$Nest$mhandleServiceArgs(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2927)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10090)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.IllegalStateException: Xray-core started but tproxy-in port 65535 is not ready
+pid=11378
+cmdline=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so run -c /data/user/0/com.nb4a.debug/files/tproxy-root/config-root.json 
+exe=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so
+Uid:	0	0	0	0
+Gid:	3005	3005	3005	3005
+== netstat ==
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:24022           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:24021           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:51922         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:2080          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:59739         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:20017         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.31.111:52039    115.170.254.25:5260     ESTABLISHED
+tcp        0      0 192.168.31.111:48112    61.184.9.206:443        ESTABLISHED
+tcp        0      0 192.168.31.111:57914    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53522    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36058         ESTABLISHED
+tcp        0      0 192.168.31.111:53918    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:57924    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:59160         127.0.0.1:2080          ESTABLISHED
+tcp       87      0 127.0.0.1:32910         127.0.0.1:2080          CLOSE_WAIT 
+tcp        0      0 192.168.31.111:55044    104.18.42.163:443       ESTABLISHED
+tcp       24      0 10.190.18.17:46792      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:54724    120.233.18.62:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53508    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:53488    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59170         ESTABLISHED
+tcp        0      0 172.19.0.1:42896        172.64.52.234:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59160         ESTABLISHED
+tcp        0      0 192.168.31.111:34578    120.221.25.34:9090      TIME_WAIT  
+tcp        0      0 192.168.31.111:53510    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53496    172.64.145.93:443       TIME_WAIT  
+tcp       32      0 10.190.18.17:43054      220.181.106.104:443     CLOSE_WAIT 
+tcp        0      0 127.0.0.1:59170         127.0.0.1:2080          ESTABLISHED
+tcp       24      0 10.190.18.17:46788      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:53922    172.64.145.93:443       TIME_WAIT  
+tcp        0    324 192.168.31.111:53920    172.64.145.93:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42912        172.64.52.234:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36044         ESTABLISHED
+tcp        0      0 192.168.31.111:58872    120.233.18.62:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42914        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:40326    120.233.18.62:443       ESTABLISHED
+tcp6       0      0 ::ffff:127.0.0.1:40717  [::]:*                  LISTEN     
+portHex=:FFFF 
+== /proc/11378/net/tcp6 ==
+  sl  local_address                         remote_address                        st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+   0: 0000000000000000FFFF00000100007F:9F0D 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10308        0 276256862 1 0000000000000000 100 0 0 10 0
+   1: 0000000000000000FFFF00000100007F:887B 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278174753 1 0000000000000000 100 0 0 10 0
+   2: 00000000000000000000000000000000:A925 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 274229485 1 0000000000000000 100 0 0 10 0
+   3: 4C8A092491C3C00CFC778EB89E11C6E5:DD4A 4D8C0924650000520000380004000000:0050 08 00000000:00000001 00:00000000 00000000 10307        0 271458093 1 0000000000000000 21 4 0 10 1400
+   4: 0000000000000000FFFF00000100007F:8CDA 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278174172 1 0000000000000000 20 4 30 10 1400
+   5: 0000000000000000FFFF00006F1FA8C0:8288 0000000000000000FFFF000035773E6F:01BB 01 00000000:00000000 00:00000000 00000000 10142        0 278205446 1 0000000000000000 23 4 33 10 1400
+   6: 4C8A092491C3C00CFC778EB89E11C6E5:E9C2 508C09249046000A0000030015000000:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277925625 1 0000000000000000 24 4 26 10 1400
+   7: 0000000000000000FFFF00006F1FA8C0:D972 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 277994319 1 0000000000000000 24 4 28 10 1400
+   8: 0000000000000000FFFF00000100007F:8CCC 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278164389 1 0000000000000000 20 4 30 10 1400
+   9: 0000000000000000FFFF00006F1FA8C0:98C0 0000000000000000FFFF0000628D0D6F:01BB 01 00000000:00000000 00:00000000 00000000 10218        0 278170690 1 0000000000000000 24 4 32 10 1400
+  10: 0000000000000000FFFF0000010013AC:97F6 0000000000000000FFFF0000BC2BC2AD:146C 01 00000000:00000000 00:00000000 00000000 10140        0 277341628 1 0000000000000000 20 4 31 10 1400
+== /proc/11378/net/tcp ==
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:5DD6 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277617671 1 0000000000000000 100 0 0 10 0                 
+   1: 00000000:5DD5 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277598301 1 0000000000000000 100 0 0 10 0                 
+   2: 0100007F:CAD2 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278179011 1 0000000000000000 100 0 0 10 0                 
+   3: 0100007F:0820 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277332093 1 0000000000000000 100 0 0 10 0                 
+   4: 0100007F:E95B 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10576        0 181994042 1 0000000000000000 100 0 0 10 0                 
+   5: 0100007F:4E31 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278178953 1 0000000000000000 100 0 0 10 0                 
+   6: 0100007F:2382 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277347104 1 0000000000000000 100 0 0 10 0                 
+   7: 6F1FA8C0:CB47 19FEAA73:148C 01 00000000:00000000 00:00000000 00000000 10147        0 277344753 1 0000000000000000 37 4 30 10 1400              
+   8: 6F1FA8C0:BBF0 CE09B83D:01BB 01 00000000:00000000 00:00000000 00000000 10576        0 277393258 1 0000000000000000 25 4 30 10 1400              
+   9: 6F1FA8C0:E23A 5D9140AC:01BB 01 00000000:00000000 02:0000D2BD 00000000 10394        0 278174183 2 0000000000000000 29 4 32 10 1400              
+  10: 6F1FA8C0:D112 5D9140AC:01BB 01 00000000:00000000 02:0000CB61 00000000 10394        0 278087553 2 0000000000000000 237 4 19 10 1400
+=== boxd start 1782919581 ===
+[33mWARN[0m[0000] legacy DNS servers is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-to-new-dns-server-formats
+[33mWARN[0m[0000] outbound DNS rule item is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] missing `route.default_domain_resolver` or `domain_resolver` in dial fields is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] legacy domain strategy options is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-domain-strategy-options
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.failStartup(RootModeRunner.kt:176)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.access$failStartup(RootModeRunner.kt:18)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner$start$2.invokeSuspend(RootModeRunner.kt:46)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+2026/07/01 15:26:33 [Debug] [ProxyInstance] {
+  "dns": {
+    "final": "dns-remote",
+    "independent_cache": true,
+    "rules": [
+      {
+        "domain": [
+          "dns.google",
+          "cloudflare.182682.xyz"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "disable_cache": true,
+        "rule_set": [
+          "ruleset-638804063"
+        ],
+        "server": "dns-block"
+      },
+      {
+        "domain_suffix": [
+          "googleapis.cn",
+          "xn--ngstr-lra8j.com",
+          "xn--ngstr-cn-8za9o.com"
+        ],
+        "server": "dns-remote"
+      },
+      {
+        "domain_suffix": [
+          "cn.bing.com",
+          "board.zash.run.place",
+          "sf-express.com",
+          "infini-cloud.net",
+          "app.sharess.cn",
+          "sharess.cn",
+          "*.cn"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "ruleset-1139705257"
+        ],
+        "server": "dns-direct"
+      }
+    ],
+    "servers": [
+      {
+        "address": "rcode://success",
+        "tag": "dns-block"
+      },
+      {
+        "address": "local",
+        "detour": "direct",
+        "tag": "dns-local"
+      },
+      {
+        "address": "local",
+        "address_resolver": "dns-local",
+        "detour": "direct",
+        "strategy": "prefer_ipv4",
+        "tag": "dns-direct"
+      },
+      {
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "dns-direct",
+        "strategy": "prefer_ipv4",
+        "tag": "dns-remote"
+      }
+    ]
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "../cache/cache.db",
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "../files/yacd"
+    }
+  },
+  "inbounds": [
+    {
+      "domain_strategy": "",
+      "listen": "::",
+      "listen_port": 65535,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "tag": "tproxy-in",
+      "type": "tproxy"
+    },
+    {
+      "domain_strategy": "",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "tag": "mixed-in",
+      "type": "mixed"
+    }
+  ],
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "domain_strategy": "prefer_ipv4",
+      "packet_encoding": "xudp",
+      "server": "172.64.52.234",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz"
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz"
+        },
+        "max_early_data": 2560,
+        "path": "/proxyip=ProxyIP.CA.CMLiussss.net",
+        "type": "ws"
+      },
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "CF-4 6",
+      "type": "vless"
+    },
+    {
+      "domain_strategy": "prefer_ipv4",
+      "packet_encoding": "",
+      "server": "cloudflare.182682.xyz",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "blog.zuohl.top"
+      },
+      "transport": {
+        "headers": {
+          "Host": "blog.zuohl.top"
+        },
+        "path": "/hotdog",
+        "type": "ws"
+      },
+      "uuid": "511592c7-3d4b-a8f8-db3f-f8fa22b27e0a",
+      "tag": "vless-blog",
+      "type": "vless"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "bypass",
+      "type": "direct"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
+    "rule_set": [
+      {
+        "format": "binary",
+        "tag": "ruleset-638804063",
+        "type": "remote",
+        "update_interval": "24h",
+        "url": "https://raw.githubusercontent.com/Yuu518/sing-box-rules/rule_set/rule_set_site/category-ads-all.srs"
+      },
+      {
+        "format": "binary",
+        "tag": "ruleset-1139705257",
+        "type": "remote",
+        "update_interval": "24h",
+        "url": "https://raw.githubusercontent.com/Yuu518/sing-box-rules/rule_set/rule_set_site/cn.srs"
+      },
+      {
+        "format": "binary",
+        "tag": "ruleset-2098364425",
+        "type": "remote",
+        "update_interval": "24h",
+        "url": "https://raw.githubusercontent.com/Yuu518/sing-box-rules/rule_set/rule_set_ip/cn.srs"
+      }
+    ],
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "port": [
+          53
+        ]
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": [
+          "dns"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "ruleset-638804063"
+        ]
+      },
+      {
+        "domain_suffix": [
+          "googleapis.cn",
+          "xn--ngstr-lra8j.com",
+          "xn--ngstr-cn-8za9o.com"
+        ],
+        "outbound": "CF-4 6"
+      },
+      {
+        "domain_suffix": [
+          "cn.bing.com",
+          "board.zash.run.place",
+          "sf-express.com",
+          "infini-cloud.net",
+          "app.sharess.cn",
+          "sharess.cn",
+          "*.cn"
+        ],
+        "outbound": "bypass"
+      },
+      {
+        "domain_suffix": [
+          "copilot.microsoft.com",
+          "openai.com",
+          "x.com",
+          "cloudflare.com",
+          "linux.do",
+          "*.sagernet.org",
+          "chatgpt.com",
+          "openai.com",
+          "auth.openai.com"
+        ],
+        "outbound": "vless-blog"
+      },
+      {
+        "outbound": "bypass",
+        "rule_set": [
+          "ruleset-1139705257",
+          "ruleset-2098364425"
+        ]
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "bypass"
+      },
+      {
+        "action": "reject",
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
+      }
+    ]
+  }
+}
+2026/07/01 15:26:33 [Debug] [ProxyInstance] {
+  "vless-blog": [
+    {
+      "error": "Get \"http://www.gstatic.com/generate_204\": context deadline exceeded",
+      "groupId": 1,
+      "id": 19127,
+      "ping": 443,
+      "rx": 3615954256,
+      "status": 1,
+      "tx": 138759350,
+      "type": 4,
+      "userOrder": 5,
+      "uuid": "",
+      "vmessBean": {
+        "alterId": -1,
+        "allowInsecure": false,
+        "alpn": "",
+        "certificates": "",
+        "earlyDataHeaderName": "",
+        "echConfig": "",
+        "enableECH": false,
+        "enableMux": false,
+        "encryption": "",
+        "headerType": "none",
+        "host": "blog.zuohl.top",
+        "mKcpSeed": "",
+        "muxBrutal": false,
+        "muxBrutalDownMbps": 100,
+        "muxBrutalUpMbps": 100,
+        "muxConcurrency": 1,
+        "muxMaxConnections": 4,
+        "muxMinStreams": 4,
+        "muxMode": 0,
+        "muxPadding": false,
+        "muxType": 0,
+        "packetEncoding": 0,
+        "path": "/hotdog",
+        "realityPubKey": "",
+        "realityShortId": "",
+        "security": "tls",
+        "sni": "blog.zuohl.top",
+        "type": "ws",
+        "utlsFingerprint": "",
+        "uuid": "511592c7-3d4b-a8f8-db3f-f8fa22b27e0a",
+        "vlessEncryption": "",
+        "wsMaxEarlyData": 0,
+        "xhttpExtra": "",
+        "xhttpMode": "auto",
+        "customConfigJson": "",
+        "customOutboundJson": "",
+        "name": "vless-blog",
+        "serverAddress": "cloudflare.182682.xyz",
+        "serverPort": 443
+      }
+    }
+  ],
+  "CF-4 6": [
+    {
+      "error": "Get \"http://www.gstatic.com/generate_204\": unexpected HTTP response status: 500",
+      "groupId": 5,
+      "id": 19368,
+      "ping": 188,
+      "rx": 0,
+      "status": 1,
+      "tx": 0,
+      "type": 4,
+      "userOrder": 49,
+      "uuid": "",
+      "vmessBean": {
+        "alterId": -1,
+        "allowInsecure": false,
+        "alpn": "",
+        "certificates": "",
+        "earlyDataHeaderName": "",
+        "echConfig": "",
+        "enableECH": false,
+        "enableMux": false,
+        "encryption": "",
+        "headerType": "none",
+        "host": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz",
+        "mKcpSeed": "",
+        "muxBrutal": false,
+        "muxBrutalDownMbps": 100,
+        "muxBrutalUpMbps": 100,
+        "muxConcurrency": 8,
+        "muxMaxConnections": 4,
+        "muxMinStreams": 4,
+        "muxMode": 0,
+        "muxPadding": false,
+        "muxType": 0,
+        "packetEncoding": 2,
+        "path": "/proxyip=ProxyIP.CA.CMLiussss.net?ed=2560",
+        "realityPubKey": "",
+        "realityShortId": "",
+        "security": "tls",
+        "sni": "c3f89v8oagkmbwsn7i49dvybp6.9999669.xyz",
+        "type": "ws",
+        "utlsFingerprint": "",
+        "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+        "vlessEncryption": "",
+        "wsMaxEarlyData": 0,
+        "xhttpExtra": "",
+        "xhttpMode": "auto",
+        "customConfigJson": "",
+        "customOutboundJson": "",
+        "name": "CF-4 6",
+        "serverAddress": "172.64.52.234",
+        "serverPort": 443
+      }
+    }
+  ]
+}
+2026/07/01 15:26:42 [Error] [AndroidAppLogger] [NekoTproxy] Failed to start TPROXY mode
+java.lang.IllegalStateException: Xray-core started but tproxy-in port 65535 is not ready
+pid=12428
+cmdline=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so run -c /data/user/0/com.nb4a.debug/files/tproxy-root/config-root.json 
+exe=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so
+Uid:	0	0	0	0
+Gid:	3005	3005	3005	3005
+== netstat ==
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:24022           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:24021           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:51922         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:2080          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:59739         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:20017         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.31.111:52039    115.170.254.25:5260     ESTABLISHED
+tcp       64      0 192.168.31.111:48112    61.184.9.206:443        CLOSE_WAIT 
+tcp        0      0 192.168.31.111:57914    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53522    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36058         ESTABLISHED
+tcp        0      0 192.168.31.111:57924    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:59160         127.0.0.1:2080          TIME_WAIT  
+tcp       87      0 127.0.0.1:32910         127.0.0.1:2080          CLOSE_WAIT 
+tcp        0      0 192.168.31.111:55044    104.18.42.163:443       ESTABLISHED
+tcp       24      0 10.190.18.17:46792      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:54724    120.233.18.62:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59170         ESTABLISHED
+tcp        0      0 172.19.0.1:42896        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:53510    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 172.19.0.1:49706        172.64.52.234:443       ESTABLISHED
+tcp       32      0 10.190.18.17:43054      220.181.106.104:443     CLOSE_WAIT 
+tcp        0      0 127.0.0.1:59170         127.0.0.1:2080          ESTABLISHED
+tcp       24      0 10.190.18.17:46788      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:53922    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 172.19.0.1:42912        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36044         ESTABLISHED
+tcp        0      0 192.168.31.111:60330    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:58872    120.233.18.62:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42914        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:40326    120.233.18.62:443       ESTABLISHED
+tcp6       0      0 ::ffff:127.0.0.1:40717  [::]:*                  LISTEN     
+tcp6       0      0 ::ffff:127.0.0.1:34939  [::]:*                  LISTEN     
+tcp6       0      0 [::]:43301              [::]:*                  LISTEN     
+tcp6       1      0 2409:8a4c:cc0:c39:56650 2409:8c4d:5200:65:38:80 CLOSE_WAIT 
+tcp6       0      0 ::ffff:127.0.0.1:36058  ::ffff:127.0.0.1:2080   ESTABLISHED
+tcp6      64      0 2409:8a4c:cc0:c39:59842 2409:8c50:a00:4690::443 CLOSE_WAIT 
+portHex=:FFFF 
+== /proc/12428/net/tcp6 ==
+  sl  local_address                         remote_address                        st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+   0: 0000000000000000FFFF00000100007F:9F0D 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10308        0 276256862 1 0000000000000000 100 0 0 10 0
+   1: 0000000000000000FFFF00000100007F:887B 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278174753 1 0000000000000000 100 0 0 10 0
+   2: 00000000000000000000000000000000:A925 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 274229485 1 0000000000000000 100 0 0 10 0
+   3: 4C8A092491C3C00CFC778EB89E11C6E5:DD4A 4D8C0924650000520000380004000000:0050 08 00000000:00000001 00:00000000 00000000 10307        0 271458093 1 0000000000000000 21 4 0 10 1400
+   4: 0000000000000000FFFF00000100007F:8CDA 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278174172 1 0000000000000000 20 4 30 10 1400
+   5: 4C8A092491C3C00CFC778EB89E11C6E5:E9C2 508C09249046000A0000030015000000:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277925625 1 0000000000000000 24 4 26 10 1400
+   6: 0000000000000000FFFF00006F1FA8C0:D972 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 277994319 1 0000000000000000 24 4 28 10 1400
+   7: 0000000000000000FFFF00000100007F:8CCC 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278164389 1 0000000000000000 20 4 30 10 1400
+   8: 0000000000000000FFFF00006F1FA8C0:98C0 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 278170690 1 0000000000000000 24 4 28 10 1400
+   9: 0000000000000000FFFF0000010013AC:97F6 0000000000000000FFFF0000BC2BC2AD:146C 01 00000000:00000000 00:00000000 00000000 10140        0 277341628 1 0000000000000000 20 4 31 10 1400
+  10: 0000000000000000FFFF00006F1FA8C0:D7BC 0000000000000000FFFF0000F5D50D6F:1466 01 00000000:00000000 00:00000000 00000000 10209        0 277330705 1 0000000000000000 26 4 31 10 1400
+== /proc/12428/net/tcp ==
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:5DD6 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277617671 1 0000000000000000 100 0 0 10 0                 
+   1: 00000000:5DD5 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277598301 1 0000000000000000 100 0 0 10 0                 
+   2: 0100007F:CAD2 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278179011 1 0000000000000000 100 0 0 10 0                 
+   3: 0100007F:0820 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277332093 1 0000000000000000 100 0 0 10 0                 
+   4: 0100007F:E95B 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10576        0 181994042 1 0000000000000000 100 0 0 10 0                 
+   5: 0100007F:4E31 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278178953 1 0000000000000000 100 0 0 10 0                 
+   6: 0100007F:2382 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277347104 1 0000000000000000 100 0 0 10 0                 
+   7: 6F1FA8C0:CB47 19FEAA73:148C 01 00000000:00000000 00:00000000 00000000 10147        0 277344753 1 0000000000000000 36 4 30 10 1400              
+   8: 6F1FA8C0:BBF0 CE09B83D:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277393258 1 0000000000000000 25 4 32 10 1400              
+   9: 6F1FA8C0:E23A 5D9140AC:01BB 01 00000000:00000000 02:0000CD72 00000000 10394        0 278174183 2 0000000000000000 29 4 32 10 1400              
+  10: 6F1FA8C0:D112 5D9140AC:01BB 01 00000000:00000000 02:0000C616 00000000 10394        0 278087553 2 0000000000000000 237 4 19 10 1400
+=== boxd start 1782919594 ===
+[33mWARN[0m[0000] legacy DNS servers is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-to-new-dns-server-formats
+[33mWARN[0m[0000] outbound DNS rule item is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] missing `route.default_domain_resolver` or `domain_resolver` in dial fields is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] legacy domain strategy options is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-domain-strategy-options
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.failStartup(RootModeRunner.kt:176)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.access$failStartup(RootModeRunner.kt:18)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner$start$2.invokeSuspend(RootModeRunner.kt:46)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+2026/07/01 15:26:42 [Warning] [BaseService$Interface$onStartCommand$1] java.lang.IllegalStateException: Failed to start TPROXY mode: Xray-core started but tproxy-in port 65535 is not ready
+pid=12428
+cmdline=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so run -c /data/user/0/com.nb4a.debug/files/tproxy-root/config-root.json 
+exe=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so
+Uid:	0	0	0	0
+Gid:	3005	3005	3005	3005
+== netstat ==
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:24022           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:24021           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:51922         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:2080          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:59739         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:20017         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.31.111:52039    115.170.254.25:5260     ESTABLISHED
+tcp       64      0 192.168.31.111:48112    61.184.9.206:443        CLOSE_WAIT 
+tcp        0      0 192.168.31.111:57914    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53522    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36058         ESTABLISHED
+tcp        0      0 192.168.31.111:57924    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:59160         127.0.0.1:2080          TIME_WAIT  
+tcp       87      0 127.0.0.1:32910         127.0.0.1:2080          CLOSE_WAIT 
+tcp        0      0 192.168.31.111:55044    104.18.42.163:443       ESTABLISHED
+tcp       24      0 10.190.18.17:46792      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:54724    120.233.18.62:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59170         ESTABLISHED
+tcp        0      0 172.19.0.1:42896        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:53510    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 172.19.0.1:49706        172.64.52.234:443       ESTABLISHED
+tcp       32      0 10.190.18.17:43054      220.181.106.104:443     CLOSE_WAIT 
+tcp        0      0 127.0.0.1:59170         127.0.0.1:2080          ESTABLISHED
+tcp       24      0 10.190.18.17:46788      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:53922    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 172.19.0.1:42912        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36044         ESTABLISHED
+tcp        0      0 192.168.31.111:60330    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:58872    120.233.18.62:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42914        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:40326    120.233.18.62:443       ESTABLISHED
+tcp6       0      0 ::ffff:127.0.0.1:40717  [::]:*                  LISTEN     
+tcp6       0      0 ::ffff:127.0.0.1:34939  [::]:*                  LISTEN     
+tcp6       0      0 [::]:43301              [::]:*                  LISTEN     
+tcp6       1      0 2409:8a4c:cc0:c39:56650 2409:8c4d:5200:65:38:80 CLOSE_WAIT 
+tcp6       0      0 ::ffff:127.0.0.1:36058  ::ffff:127.0.0.1:2080   ESTABLISHED
+tcp6      64      0 2409:8a4c:cc0:c39:59842 2409:8c50:a00:4690::443 CLOSE_WAIT 
+portHex=:FFFF 
+== /proc/12428/net/tcp6 ==
+  sl  local_address                         remote_address                        st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+   0: 0000000000000000FFFF00000100007F:9F0D 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10308        0 276256862 1 0000000000000000 100 0 0 10 0
+   1: 0000000000000000FFFF00000100007F:887B 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278174753 1 0000000000000000 100 0 0 10 0
+   2: 00000000000000000000000000000000:A925 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 274229485 1 0000000000000000 100 0 0 10 0
+   3: 4C8A092491C3C00CFC778EB89E11C6E5:DD4A 4D8C0924650000520000380004000000:0050 08 00000000:00000001 00:00000000 00000000 10307        0 271458093 1 0000000000000000 21 4 0 10 1400
+   4: 0000000000000000FFFF00000100007F:8CDA 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278174172 1 0000000000000000 20 4 30 10 1400
+   5: 4C8A092491C3C00CFC778EB89E11C6E5:E9C2 508C09249046000A0000030015000000:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277925625 1 0000000000000000 24 4 26 10 1400
+   6: 0000000000000000FFFF00006F1FA8C0:D972 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 277994319 1 0000000000000000 24 4 28 10 1400
+   7: 0000000000000000FFFF00000100007F:8CCC 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278164389 1 0000000000000000 20 4 30 10 1400
+   8: 0000000000000000FFFF00006F1FA8C0:98C0 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 278170690 1 0000000000000000 24 4 28 10 1400
+   9: 0000000000000000FFFF0000010013AC:97F6 0000000000000000FFFF0000BC2BC2AD:146C 01 00000000:00000000 00:00000000 00000000 10140        0 277341628 1 0000000000000000 20 4 31 10 1400
+  10: 0000000000000000FFFF00006F1FA8C0:D7BC 0000000000000000FFFF0000F5D50D6F:1466 01 00000000:00000000 00:00000000 00000000 10209        0 277330705 1 0000000000000000 26 4 31 10 1400
+== /proc/12428/net/tcp ==
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:5DD6 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277617671 1 0000000000000000 100 0 0 10 0                 
+   1: 00000000:5DD5 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277598301 1 0000000000000000 100 0 0 10 0                 
+   2: 0100007F:CAD2 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278179011 1 0000000000000000 100 0 0 10 0                 
+   3: 0100007F:0820 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277332093 1 0000000000000000 100 0 0 10 0                 
+   4: 0100007F:E95B 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10576        0 181994042 1 0000000000000000 100 0 0 10 0                 
+   5: 0100007F:4E31 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278178953 1 0000000000000000 100 0 0 10 0                 
+   6: 0100007F:2382 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277347104 1 0000000000000000 100 0 0 10 0                 
+   7: 6F1FA8C0:CB47 19FEAA73:148C 01 00000000:00000000 00:00000000 00000000 10147        0 277344753 1 0000000000000000 36 4 30 10 1400              
+   8: 6F1FA8C0:BBF0 CE09B83D:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277393258 1 0000000000000000 25 4 32 10 1400              
+   9: 6F1FA8C0:E23A 5D9140AC:01BB 01 00000000:00000000 02:0000CD72 00000000 10394        0 278174183 2 0000000000000000 29 4 32 10 1400              
+  10: 6F1FA8C0:D112 5D9140AC:01BB 01 00000000:00000000 02:0000C616 00000000 10394        0 278087553 2 0000000000000000 237 4 19 10 1400
+=== boxd start 1782919594 ===
+[33mWARN[0m[0000] legacy DNS servers is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-to-new-dns-server-formats
+[33mWARN[0m[0000] outbound DNS rule item is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] missing `route.default_domain_resolver` or `domain_resolver` in dial fields is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] legacy domain strategy options is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-domain-strategy-options
+	at moe.matsuri.nb4a.tproxy.root.RootModeEngine.start(RootModeEngine.kt:55)
+	at moe.matsuri.nb4a.tproxy.root.RootModeEngine$start$1.invokeSuspend(Unknown Source:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at io.nekohasekai.sagernet.bg.proto.TproxyInstance.launch(TproxyInstance.kt:45)
+	at io.nekohasekai.sagernet.bg.BaseService$Interface$DefaultImpls.startProcesses(BaseService.kt:217)
+	at io.nekohasekai.sagernet.bg.TproxyService.startProcesses(TproxyService.kt:17)
+	at io.nekohasekai.sagernet.bg.BaseService$Interface$onStartCommand$1.invokeSuspend(BaseService.kt:380)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:367)
+	at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable(Cancellable.kt:30)
+	at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable$default(Cancellable.kt:25)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:110)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch$default(Builders.common.kt:47)
+	at kotlinx.coroutines.BuildersKt.launch$default(Unknown Source:1)
+	at io.nekohasekai.sagernet.ktx.AsyncsKt.runOnMainDispatcher(Asyncs.kt:29)
+	at io.nekohasekai.sagernet.bg.BaseService$Interface$DefaultImpls.onStartCommand(BaseService.kt:366)
+	at io.nekohasekai.sagernet.bg.TproxyService.onStartCommand(TproxyService.kt:40)
+	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5955)
+	at android.app.ActivityThread.-$$Nest$mhandleServiceArgs(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2927)
+	at android.os.Handler.dispatchMessage(Handler.java:114)
+	at android.os.Looper.loopOnce(Looper.java:274)
+	at android.os.Looper.loop(Looper.java:369)
+	at android.app.ActivityThread.main(ActivityThread.java:10090)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+Caused by: java.lang.IllegalStateException: Xray-core started but tproxy-in port 65535 is not ready
+pid=12428
+cmdline=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so run -c /data/user/0/com.nb4a.debug/files/tproxy-root/config-root.json 
+exe=/data/app/~~O_KEk8xQKP5I71cT54Zfjg==/com.nb4a.debug-vuCCILNnEWz5smr46AsU1Q==/lib/arm64/libboxd.so
+Uid:	0	0	0	0
+Gid:	3005	3005	3005	3005
+== netstat ==
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:24022           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:24021           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:51922         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:2080          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:59739         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:20017         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:9090          0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.31.111:52039    115.170.254.25:5260     ESTABLISHED
+tcp       64      0 192.168.31.111:48112    61.184.9.206:443        CLOSE_WAIT 
+tcp        0      0 192.168.31.111:57914    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:53522    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36058         ESTABLISHED
+tcp        0      0 192.168.31.111:57924    172.64.145.93:443       ESTABLISHED
+tcp        0      0 127.0.0.1:59160         127.0.0.1:2080          TIME_WAIT  
+tcp       87      0 127.0.0.1:32910         127.0.0.1:2080          CLOSE_WAIT 
+tcp        0      0 192.168.31.111:55044    104.18.42.163:443       ESTABLISHED
+tcp       24      0 10.190.18.17:46792      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:54724    120.233.18.62:443       ESTABLISHED
+tcp        0      0 127.0.0.1:2080          127.0.0.1:59170         ESTABLISHED
+tcp        0      0 172.19.0.1:42896        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:53510    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 172.19.0.1:49706        172.64.52.234:443       ESTABLISHED
+tcp       32      0 10.190.18.17:43054      220.181.106.104:443     CLOSE_WAIT 
+tcp        0      0 127.0.0.1:59170         127.0.0.1:2080          ESTABLISHED
+tcp       24      0 10.190.18.17:46788      220.181.106.230:443     CLOSE_WAIT 
+tcp        0      0 192.168.31.111:53922    172.64.145.93:443       TIME_WAIT  
+tcp        0      0 172.19.0.1:42912        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 127.0.0.1:2080          127.0.0.1:36044         ESTABLISHED
+tcp        0      0 192.168.31.111:60330    172.64.145.93:443       ESTABLISHED
+tcp        0      0 192.168.31.111:58872    120.233.18.62:443       ESTABLISHED
+tcp        0      0 172.19.0.1:42914        172.64.52.234:443       TIME_WAIT  
+tcp        0      0 192.168.31.111:40326    120.233.18.62:443       ESTABLISHED
+tcp6       0      0 ::ffff:127.0.0.1:40717  [::]:*                  LISTEN     
+tcp6       0      0 ::ffff:127.0.0.1:34939  [::]:*                  LISTEN     
+tcp6       0      0 [::]:43301              [::]:*                  LISTEN     
+tcp6       1      0 2409:8a4c:cc0:c39:56650 2409:8c4d:5200:65:38:80 CLOSE_WAIT 
+tcp6       0      0 ::ffff:127.0.0.1:36058  ::ffff:127.0.0.1:2080   ESTABLISHED
+tcp6      64      0 2409:8a4c:cc0:c39:59842 2409:8c50:a00:4690::443 CLOSE_WAIT 
+portHex=:FFFF 
+== /proc/12428/net/tcp6 ==
+  sl  local_address                         remote_address                        st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+   0: 0000000000000000FFFF00000100007F:9F0D 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10308        0 276256862 1 0000000000000000 100 0 0 10 0
+   1: 0000000000000000FFFF00000100007F:887B 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278174753 1 0000000000000000 100 0 0 10 0
+   2: 00000000000000000000000000000000:A925 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 274229485 1 0000000000000000 100 0 0 10 0
+   3: 4C8A092491C3C00CFC778EB89E11C6E5:DD4A 4D8C0924650000520000380004000000:0050 08 00000000:00000001 00:00000000 00000000 10307        0 271458093 1 0000000000000000 21 4 0 10 1400
+   4: 0000000000000000FFFF00000100007F:8CDA 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278174172 1 0000000000000000 20 4 30 10 1400
+   5: 4C8A092491C3C00CFC778EB89E11C6E5:E9C2 508C09249046000A0000030015000000:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277925625 1 0000000000000000 24 4 26 10 1400
+   6: 0000000000000000FFFF00006F1FA8C0:D972 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 277994319 1 0000000000000000 24 4 28 10 1400
+   7: 0000000000000000FFFF00000100007F:8CCC 0000000000000000FFFF00000100007F:0820 01 00000000:00000000 00:00000000 00000000 10129        0 278164389 1 0000000000000000 20 4 30 10 1400
+   8: 0000000000000000FFFF00006F1FA8C0:98C0 0000000000000000FFFF0000628D0D6F:01BB 08 00000000:00000018 00:00000000 00000000 10218        0 278170690 1 0000000000000000 24 4 28 10 1400
+   9: 0000000000000000FFFF0000010013AC:97F6 0000000000000000FFFF0000BC2BC2AD:146C 01 00000000:00000000 00:00000000 00000000 10140        0 277341628 1 0000000000000000 20 4 31 10 1400
+  10: 0000000000000000FFFF00006F1FA8C0:D7BC 0000000000000000FFFF0000F5D50D6F:1466 01 00000000:00000000 00:00000000 00000000 10209        0 277330705 1 0000000000000000 26 4 31 10 1400
+== /proc/12428/net/tcp ==
+  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     
+   0: 00000000:5DD6 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277617671 1 0000000000000000 100 0 0 10 0                 
+   1: 00000000:5DD5 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10307        0 277598301 1 0000000000000000 100 0 0 10 0                 
+   2: 0100007F:CAD2 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278179011 1 0000000000000000 100 0 0 10 0                 
+   3: 0100007F:0820 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277332093 1 0000000000000000 100 0 0 10 0                 
+   4: 0100007F:E95B 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10576        0 181994042 1 0000000000000000 100 0 0 10 0                 
+   5: 0100007F:4E31 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10461        0 278178953 1 0000000000000000 100 0 0 10 0                 
+   6: 0100007F:2382 00000000:0000 0A 00000000:00000000 00:00000000 00000000 10394        0 277347104 1 0000000000000000 100 0 0 10 0                 
+   7: 6F1FA8C0:CB47 19FEAA73:148C 01 00000000:00000000 00:00000000 00000000 10147        0 277344753 1 0000000000000000 36 4 30 10 1400              
+   8: 6F1FA8C0:BBF0 CE09B83D:01BB 08 00000000:00000040 00:00000000 00000000 10576        0 277393258 1 0000000000000000 25 4 32 10 1400              
+   9: 6F1FA8C0:E23A 5D9140AC:01BB 01 00000000:00000000 02:0000CD72 00000000 10394        0 278174183 2 0000000000000000 29 4 32 10 1400              
+  10: 6F1FA8C0:D112 5D9140AC:01BB 01 00000000:00000000 02:0000C616 00000000 10394        0 278087553 2 0000000000000000 237 4 19 10 1400
+=== boxd start 1782919594 ===
+[33mWARN[0m[0000] legacy DNS servers is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-to-new-dns-server-formats
+[33mWARN[0m[0000] outbound DNS rule item is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] missing `route.default_domain_resolver` or `domain_resolver` in dial fields is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-outbound-dns-rule-items-to-domain-resolver
+[33mWARN[0m[0000] legacy domain strategy options is deprecated in sing-box 1.12.0 and will be removed in sing-box 1.14.0, checkout documentation for migration: https://sing-box.sagernet.org/migration/#migrate-domain-strategy-options
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.failStartup(RootModeRunner.kt:176)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner.access$failStartup(RootModeRunner.kt:18)
+	at moe.matsuri.nb4a.tproxy.root.RootModeRunner$start$2.invokeSuspend(RootModeRunner.kt:46)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
