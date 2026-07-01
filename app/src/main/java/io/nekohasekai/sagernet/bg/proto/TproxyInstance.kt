@@ -1,10 +1,7 @@
 package io.nekohasekai.sagernet.bg.proto
 
 import io.nekohasekai.sagernet.bg.BaseService
-import io.nekohasekai.sagernet.bg.ServiceNotification
 import io.nekohasekai.sagernet.database.ProxyEntity
-import io.nekohasekai.sagernet.fmt.buildConfig
-import io.nekohasekai.sagernet.ktx.Logs
 import io.nekohasekai.sagernet.ktx.runOnDefaultDispatcher
 import io.nekohasekai.sagernet.SagerNet
 import kotlinx.coroutines.runBlocking
@@ -36,7 +33,6 @@ class TproxyInstance(profile: ProxyEntity, service: BaseService.Interface? = nul
         val cfg = config.config
         val buildContext = SagerNet.application.prepareRootConfigBuildContext()
         val runner = TproxyRootRunner(rootAccess)
-        @Suppress("UNCHECKED_CAST")
         val modeEngine = RootModeEngine(
             context = SagerNet.application,
             rootAccess = rootAccess,

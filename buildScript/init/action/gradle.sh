@@ -5,6 +5,9 @@ set -e
 #### Download assets
 bash buildScript/lib/assets.sh
 
+#### Download sing-box standalone binary for tproxy root daemon mode
+bash buildScript/lib/boxd.sh
+
 exit
 
 #### Download "external" from Internet
