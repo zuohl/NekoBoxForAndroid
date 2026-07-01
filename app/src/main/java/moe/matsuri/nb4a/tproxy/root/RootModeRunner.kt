@@ -31,7 +31,7 @@ abstract class RootModeRunner<Config : RootModeStartConfig>(
             command = config.root.buildStartIpv6DisablerCommand(),
             failureMessage = "Failed to start IPv6 disabler daemon",
         )
-        runRootCommand(config.root.buildStartDaemonCommand(), "Failed to start Xray-core daemon")
+        runRootCommand(config.root.buildStartDaemonCommand(), "Failed to start sing-box daemon")
         runRootCommandIfNotBlank(
             command = buildPostCoreStartCommand(config),
             failureMessage = "Failed to start $modeName helper runtime",
@@ -46,7 +46,7 @@ abstract class RootModeRunner<Config : RootModeStartConfig>(
             failStartup(config, readinessCheck.failureMessage)
         }
         if (!isRunning(config.root.runtimeLayout)) {
-            failStartup(config, "Xray-core process exited or did not match the expected $modeName runtime state")
+            failStartup(config, "sing-box process exited or did not match the expected $modeName runtime state")
         }
         if (!isModeRuntimeRunning(config)) {
             failStartup(config, "$modeName helper runtime exited or did not match the expected runtime state")
@@ -92,7 +92,7 @@ abstract class RootModeRunner<Config : RootModeStartConfig>(
         if (command.isBlank()) {
             return@withContext
         }
-        runRootCommand(command, "Failed to prepare Xray log files")
+        runRootCommand(command, "Failed to prepare sing-box log files")
     }
 
     suspend fun ownsRuntime(runtimeLayout: RootRuntimeLayout): Boolean = withContext(Dispatchers.IO) {
@@ -172,7 +172,7 @@ abstract class RootModeRunner<Config : RootModeStartConfig>(
         val errorLog = config.root.collectRootErrorLogTail(rootAccess)
         val processDiagnostics = config.root.collectRootProcessDiagnostics(rootAccess)
         val modeDiagnostics = collectReadinessDiagnostics(config)
-        runRootCommand(buildStopCommand(config.root.runtimeLayout), "Failed to clean up after Xray-core startup failure")
+        runRootCommand(buildStopCommand(config.root.runtimeLayout), "Failed to clean up after sing-box startup failure")
         error(
             buildRootDiagnosticMessage(
                 message,

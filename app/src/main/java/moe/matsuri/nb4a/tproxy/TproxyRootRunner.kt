@@ -35,7 +35,7 @@ class TproxyRootRunner(
         return RootReadinessCheck(
             description = "tproxy-in port ${config.tproxyPort}",
             command = buildRootPortReadyCommand(config.tproxyPort),
-            failureMessage = "Xray-core started but tproxy-in port ${config.tproxyPort} is not ready",
+            failureMessage = "sing-box started but tproxy-in port ${config.tproxyPort} is not ready",
         )
     }
 

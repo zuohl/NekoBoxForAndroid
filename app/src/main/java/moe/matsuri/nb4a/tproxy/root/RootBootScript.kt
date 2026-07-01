@@ -62,7 +62,7 @@ private fun <Config : RootModeStartConfig> Config.buildRootStartupScript(
         }
         appendScript("section \"Prepare core logs\"")
         append(root.coreLogPaths.buildPrepareCoreLogFilesCommand())
-        appendScript("section \"Start Xray-core\"")
+        appendScript("section \"Start sing-box\"")
         append(root.buildBootStartDaemonCommand())
         val postCoreStartCommand = buildPostCoreStartCommand(this@buildRootStartupScript)
         if (postCoreStartCommand.isNotBlank()) {
@@ -153,7 +153,7 @@ private fun <Config : RootModeStartConfig> StringBuilder.appendRootStartupPreamb
         dump_failure_diagnostics() {
             diagnostics_dumped=1
             echo
-            echo "Recent Xray error log:"
+            echo "Recent sing-box error log:"
             tail -n 80 $${config.root.coreLogPaths.errorLogPath.shellQuote()} || true
         """,
     )
