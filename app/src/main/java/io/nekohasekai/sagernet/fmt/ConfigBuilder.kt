@@ -307,8 +307,9 @@ fun buildConfig(
             rules = mutableListOf()
             rule_set = mutableListOf()
 
-            // 娣诲姞骞跺彂鎷ㄥ彿璁剧疆
-             concurrent_dial = DataStore.concurrentDial
+            // concurrent_dial is a fork-only field; the upstream sing-box
+            // binary used for tproxy root mode rejects it as unknown.
+            if (!isTproxy) concurrent_dial = DataStore.concurrentDial
         }
 
         // returns outbound tag
