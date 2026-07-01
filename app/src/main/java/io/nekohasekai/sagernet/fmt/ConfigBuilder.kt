@@ -246,7 +246,6 @@ fun buildConfig(
                 tag = "tproxy-in"
                 listen = "::"
                 listen_port = DataStore.tproxyRootPort
-                network = "tcp,udp"
                 sniff = needSniff
                 sniff_override_destination = needSniffOverride
                 domain_strategy = genDomainStrategy(DataStore.resolveDestination)
