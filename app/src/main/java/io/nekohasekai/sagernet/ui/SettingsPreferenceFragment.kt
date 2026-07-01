@@ -73,6 +73,8 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
         }
         val mixedPort = findPreference<EditTextPreference>(Key.MIXED_PORT)!!
         val serviceMode = findPreference<Preference>(Key.SERVICE_MODE)!!
+        val tproxySettingsCategory = findPreference<Preference>("tproxySettingsCategory")!!
+        tproxySettingsCategory.isVisible = DataStore.serviceMode == Key.MODE_TPROXY
         val allowAccess = findPreference<Preference>(Key.ALLOW_ACCESS)!!
         val appendHttpProxy = findPreference<SwitchPreference>(Key.APPEND_HTTP_PROXY)!!
         val httpProxyBypass = findPreference<EditTextPreference>(Key.HTTP_PROXY_BYPASS)!!
@@ -148,7 +150,8 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
             true
         }
 
-        serviceMode.setOnPreferenceChangeListener { _, _ ->
+        serviceMode.setOnPreferenceChangeListener { _, newValue ->
+            tproxySettingsCategory.isVisible = newValue == Key.MODE_TPROXY
             if (DataStore.serviceState.started) SagerNet.stopService()
             true
         }

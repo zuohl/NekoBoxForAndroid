@@ -112,6 +112,35 @@
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        app:key="tproxySettingsCategory"
+        app:title="@string/tproxy_settings">
+        <moe.matsuri.nb4a.ui.EditConfigPreference
+            app:key="tproxyRootPort"
+            app:title="@string/tproxy_root_port"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            app:key="tproxyRootEbpf"
+            app:summary="@string/tproxy_root_ebpf_summary"
+            app:title="@string/tproxy_root_ebpf" />
+        <SwitchPreference
+            app:key="tproxyRootEbpfDirectBypass"
+            app:summary="@string/tproxy_root_ebpf_direct_bypass_summary"
+            app:title="@string/tproxy_root_ebpf_direct_bypass" />
+        <SwitchPreference
+            app:key="tproxyRootBootScript"
+            app:summary="@string/tproxy_root_boot_script_summary"
+            app:title="@string/tproxy_root_boot_script" />
+        <SwitchPreference
+            app:key="tproxyRootIpv6Disabler"
+            app:summary="@string/tproxy_root_ipv6_disabler_summary"
+            app:title="@string/tproxy_root_ipv6_disabler" />
+        <SwitchPreference
+            app:key="tproxyRootAccessLog"
+            app:summary="@string/tproxy_root_access_log_summary"
+            app:title="@string/tproxy_root_access_log" />
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="@string/cag_route">
         <SwitchPreference
             app:icon="@drawable/ic_navigation_apps"

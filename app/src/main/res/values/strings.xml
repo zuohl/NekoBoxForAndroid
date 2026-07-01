@@ -57,6 +57,18 @@
     <string name="service_mode_proxy">Proxy only</string>
     <string name="service_mode_tproxy">TPROXY (Root)</string>
     <string name="service_mode_vpn" translatable="false">VPN</string>
+    <string name="tproxy_settings">TPROXY (Root) Settings</string>
+    <string name="tproxy_root_port">TPROXY Port</string>
+    <string name="tproxy_root_ebpf">eBPF Matcher</string>
+    <string name="tproxy_root_ebpf_summary">Match traffic via eBPF programs instead of iptables (requires kernel eBPF support)</string>
+    <string name="tproxy_root_ebpf_direct_bypass">eBPF Direct Bypass</string>
+    <string name="tproxy_root_ebpf_direct_bypass_summary">Bypass direct traffic through eBPF instead of iptables</string>
+    <string name="tproxy_root_boot_script">Boot Autostart (Magisk service.d)</string>
+    <string name="tproxy_root_boot_script_summary">Generate /data/adb/service.d script so the tproxy daemon starts on boot</string>
+    <string name="tproxy_root_ipv6_disabler">IPv6 Disabler</string>
+    <string name="tproxy_root_ipv6_disabler_summary">Disable IPv6 via root to prevent leaks</string>
+    <string name="tproxy_root_access_log">Access Log</string>
+    <string name="tproxy_root_access_log_summary">Record sing-box access log</string>
     <string name="port_proxy">Proxy Port</string>
     <string name="port_http">HTTP Proxy Port</string>
     <string name="port_transproxy">Transproxy Port</string>
