@@ -1127,6 +1127,8 @@ public class SingBoxOptions {
 
         public String url;
 
+        public String download_detour;
+
 	public String update_interval;
 
     }

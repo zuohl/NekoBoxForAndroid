@@ -1,6 +1,7 @@
 package moe.matsuri.nb4a
 
 import io.nekohasekai.sagernet.database.DataStore
+import io.nekohasekai.sagernet.fmt.TAG_BYPASS
 import moe.matsuri.nb4a.SingBoxOptions.RuleSet
 import io.nekohasekai.sagernet.R
 import io.nekohasekai.sagernet.SagerNet
@@ -167,23 +168,50 @@ fun SingBoxOptions.Rule_DefaultOptions.checkEmpty(): Boolean {
     return true
 }
 
-fun processRulesetUrl(origUrl: String): Pair<String, Boolean> {
-    return when {
-        origUrl.startsWith("rsip:") -> {
-            // IP类型ruleset
-            Pair(origUrl.substring(5), true)
-        }
-        origUrl.startsWith("rssite:") -> {
-            // 域名类型ruleset
-            Pair(origUrl.substring(7), false)
-        }
-        else -> {
-            throw kotlin.Exception(SagerNet.application.getString(R.string.ruleset_prefix_error))
-        }
+data class ParsedRuleset(
+    val url: String,
+    val isIPRuleset: Boolean,
+    val detour: String?
+)
+
+fun processRulesetUrl(origUrl: String): ParsedRuleset {
+    var isIP = false
+    var rawUrl = origUrl.trim()
+
+    if (rawUrl.startsWith("rsip:", ignoreCase = true)) {
+        isIP = true
+        rawUrl = rawUrl.substring(5).trim()
+    } else if (rawUrl.startsWith("rssite:", ignoreCase = true)) {
+        isIP = false
+        rawUrl = rawUrl.substring(7).trim()
+    } else if (rawUrl.startsWith("http://", ignoreCase = true) || rawUrl.startsWith("https://", ignoreCase = true)) {
+        val lower = rawUrl.lowercase()
+        isIP = lower.contains("geoip") || lower.contains("/ip/") || lower.contains("-ip.")
+    } else {
+        throw kotlin.Exception(SagerNet.application.getString(R.string.ruleset_prefix_error))
     }
+
+    var detour: String? = TAG_BYPASS
+    if (rawUrl.startsWith("proxy:", ignoreCase = true)) {
+        detour = null
+        rawUrl = rawUrl.substring(6).trim()
+    } else if (rawUrl.startsWith("direct:", ignoreCase = true)) {
+        detour = TAG_BYPASS
+        rawUrl = rawUrl.substring(7).trim()
+    } else if (rawUrl.startsWith("bypass:", ignoreCase = true)) {
+        detour = TAG_BYPASS
+        rawUrl = rawUrl.substring(7).trim()
+    }
+
+    return ParsedRuleset(rawUrl, isIP, detour)
 }
 
-fun generateRemoteRuleSet(url: String, ruleSets: MutableList<RuleSet>, updateInterval: String): String {
+fun generateRemoteRuleSet(
+    url: String,
+    ruleSets: MutableList<RuleSet>,
+    updateInterval: String,
+    detour: String? = TAG_BYPASS
+): String {
     val hashCode = kotlin.math.abs(url.hashCode())
     val tag = "ruleset-$hashCode"
 
@@ -193,6 +221,7 @@ fun generateRemoteRuleSet(url: String, ruleSets: MutableList<RuleSet>, updateInt
         this.tag = tag
         format = if (url.substringBefore("?").endsWith(".json")) "source" else "binary"
         this.url = url
+        this.download_detour = detour
         update_interval = updateInterval
     })
     

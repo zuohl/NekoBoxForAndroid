@@ -667,9 +667,9 @@ fun buildConfig(
                     if (rule.ruleset.isNotBlank()) {
                         val rulesetUrls = rule.ruleset.listByLineOrComma()
                         rulesetUrls.forEach { origUrl ->
-                            val (url, isIPRuleset) = processRulesetUrl(origUrl)
+                            val (url, isIPRuleset, detour) = processRulesetUrl(origUrl)
                             
-                            val tag = generateRemoteRuleSet(url, ruleSets, DataStore.rulesUpdateInterval)
+                            val tag = generateRemoteRuleSet(url, ruleSets, DataStore.rulesUpdateInterval, detour)
                             
                             rulesetTags.add(Pair(tag, isIPRuleset))
                             
