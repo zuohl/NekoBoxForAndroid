@@ -260,31 +260,16 @@ fun buildConfig(
                 type = "tun"
                 tag = "tun-in"
                 interface_name = "tun0"
-                stack = when (DataStore.tunImplementation) {
-                    TunImplementation.GVISOR -> "gvisor"
-                    TunImplementation.SYSTEM -> "system"
-                    else -> "mixed"
-                }
-                endpoint_independent_nat = true
                 mtu = DataStore.mtu
-                domain_strategy = genDomainStrategy(DataStore.resolveDestination)
                 auto_route = true
                 strict_route = DataStore.strictRoute
-                sniff = needSniff
-                sniff_override_destination = needSniffOverride
-                when (ipv6Mode) {
-                    IPv6Mode.DISABLE -> {
-                        inet4_address = listOf(VpnService.PRIVATE_VLAN4_CLIENT + "/28")
-                    }
-
-                    IPv6Mode.ONLY -> {
-                        inet6_address = listOf(VpnService.PRIVATE_VLAN6_CLIENT + "/126")
-                    }
-
-                    else -> {
-                        inet4_address = listOf(VpnService.PRIVATE_VLAN4_CLIENT + "/28")
-                        inet6_address = listOf(VpnService.PRIVATE_VLAN6_CLIENT + "/126")
-                    }
+                address = when (ipv6Mode) {
+                    IPv6Mode.DISABLE -> listOf(VpnService.PRIVATE_VLAN4_CLIENT + "/28")
+                    IPv6Mode.ONLY -> listOf(VpnService.PRIVATE_VLAN6_CLIENT + "/126")
+                    else -> listOf(
+                        VpnService.PRIVATE_VLAN4_CLIENT + "/28",
+                        VpnService.PRIVATE_VLAN6_CLIENT + "/126"
+                    )
                 }
             })
             inbounds.add(Inbound_MixedOptions().apply {
@@ -292,9 +277,6 @@ fun buildConfig(
                 tag = TAG_MIXED
                 listen = bind
                 listen_port = DataStore.mixedPort
-                domain_strategy = genDomainStrategy(DataStore.resolveDestination)
-                sniff = needSniff
-                sniff_override_destination = needSniffOverride
                 if (DataStore.mixedInboundHasAuth) {
                     users = listOf(User().also { u ->
                         u.username = DataStore.mixedUsername
@@ -916,40 +898,115 @@ fun buildConfig(
             }
         }
 
+        fun parseDnsServer(
+            input: String,
+            tag: String,
+            defaultDetour: String? = null,
+            resolver: String? = null,
+            domainStrategy: String? = null
+        ): DNSServerOptions {
+            return DNSServerOptions().apply {
+                this.tag = tag
+                if (defaultDetour != null) this.detour = defaultDetour
+                if (resolver != null) this.address_resolver = resolver
+                if (domainStrategy != null) this.strategy = domainStrategy
+                val trimmed = input.trim()
+                when {
+                    trimmed.startsWith("https://", ignoreCase = true) -> {
+                        type = "https"
+                        val url = trimmed.toHttpUrlOrNull()
+                        if (url != null) {
+                            server = url.host
+                            server_port = url.port
+                            path = url.encodedPath.takeIf { it.isNotEmpty() && it != "/" }
+                        } else {
+                            val noProto = trimmed.substring(8)
+                            server = noProto.substringBefore("/")
+                            val p = noProto.substringAfter("/", "")
+                            if (p.isNotEmpty()) path = "/$p"
+                        }
+                    }
+                    trimmed.startsWith("tls://", ignoreCase = true) -> {
+                        type = "tls"
+                        val hostPort = trimmed.substring(6)
+                        server = hostPort.substringBefore(":")
+                        val portStr = hostPort.substringAfter(":", "")
+                        if (portStr.isNotEmpty()) server_port = portStr.toIntOrNull()
+                    }
+                    trimmed.startsWith("tcp://", ignoreCase = true) -> {
+                        type = "tcp"
+                        val hostPort = trimmed.substring(6)
+                        server = hostPort.substringBefore(":")
+                        val portStr = hostPort.substringAfter(":", "")
+                        if (portStr.isNotEmpty()) server_port = portStr.toIntOrNull()
+                    }
+                    trimmed.startsWith("quic://", ignoreCase = true) -> {
+                        type = "quic"
+                        val hostPort = trimmed.substring(7)
+                        server = hostPort.substringBefore(":")
+                        val portStr = hostPort.substringAfter(":", "")
+                        if (portStr.isNotEmpty()) server_port = portStr.toIntOrNull()
+                    }
+                    trimmed.startsWith("h3://", ignoreCase = true) -> {
+                        type = "h3"
+                        val hostPort = trimmed.substring(5)
+                        server = hostPort.substringBefore(":")
+                        val portStr = hostPort.substringAfter(":", "")
+                        if (portStr.isNotEmpty()) server_port = portStr.toIntOrNull()
+                    }
+                    trimmed.equals("local", ignoreCase = true) -> {
+                        type = "local"
+                    }
+                    trimmed.startsWith("rcode://", ignoreCase = true) -> {
+                        type = "rcode"
+                        rcode = trimmed.substring(8).uppercase().takeIf { it.isNotEmpty() } ?: "NOERROR"
+                    }
+                    else -> {
+                        val hostPort = if (trimmed.startsWith("udp://", ignoreCase = true)) trimmed.substring(6) else trimmed
+                        type = "udp"
+                        server = hostPort.substringBefore(":")
+                        val portStr = hostPort.substringAfter(":", "")
+                        if (portStr.isNotEmpty()) server_port = portStr.toIntOrNull()
+                    }
+                }
+            }
+        }
+
         dns.servers.add(DNSServerOptions().apply {
-            address = "rcode://success"
+            type = "rcode"
             tag = "dns-block"
+            rcode = "NOERROR"
         })
 
         dns.servers.add(DNSServerOptions().apply {
-            address = "local"
+            type = "local"
             tag = "dns-local"
             detour = TAG_DIRECT
         })
 
         directDNS.firstOrNull().let {
-            dns.servers.add(DNSServerOptions().apply {
-                address = it ?: throw Exception("No direct DNS, check your settings!")
-                tag = "dns-direct"
-                detour = TAG_DIRECT
-                address_resolver = "dns-local"
-                strategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy(tag))
-            })
+            dns.servers.add(parseDnsServer(
+                it ?: throw Exception("No direct DNS, check your settings!"),
+                tag = "dns-direct",
+                defaultDetour = TAG_DIRECT,
+                resolver = "dns-local",
+                domainStrategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy("dns-direct"))
+            ))
         }
 
         remoteDns.firstOrNull().let {
             // Always use direct DNS for urlTest
-            if (!forTest) dns.servers.add(DNSServerOptions().apply {
-                address = it ?: throw Exception("No remote DNS, check your settings!")
-                tag = "dns-remote"
-                address_resolver = "dns-direct"
-                strategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy(tag))
-            })
+            if (!forTest) dns.servers.add(parseDnsServer(
+                it ?: throw Exception("No remote DNS, check your settings!"),
+                tag = "dns-remote",
+                resolver = "dns-direct",
+                domainStrategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy("dns-remote"))
+            ))
         }
         if (dnsHosts.isNotEmpty()) {
             dns.servers.add(DNSServerOptions().apply {
                 tag = TAG_DNS_HOSTS
-                _hack_config_map["type"] = "hosts"
+                type = "hosts"
                 _hack_config_map["predefined"] = dnsHosts
             })
         }
@@ -975,6 +1032,15 @@ fun buildConfig(
                 port = listOf(53)
                 action = "hijack-dns"
             })
+            if (needSniffOverride) {
+                route.rules.add(0, Rule_DefaultOptions().apply {
+                    action = "sniff-override-destination"
+                })
+            } else if (needSniff) {
+                route.rules.add(0, Rule_DefaultOptions().apply {
+                    action = "sniff"
+                })
+            }
             if (DataStore.bypassLanInCore) {
                 route.rules.add(Rule_DefaultOptions().apply {
                     outbound = TAG_BYPASS
@@ -989,15 +1055,11 @@ fun buildConfig(
             })
             // FakeDNS obj
             if (useFakeDns) {
-                dns.fakeip = DNSFakeIPOptions().apply {
-                    enabled = true
+                dns.servers.add(DNSServerOptions().apply {
+                    type = "fakeip"
+                    tag = "dns-fake"
                     inet4_range = "198.18.0.0/15"
                     inet6_range = "fc00::/18"
-                }
-                dns.servers.add(DNSServerOptions().apply {
-                    address = "fakeip"
-                    tag = "dns-fake"
-                    strategy = "ipv4_only"
                 })
                 dns.rules.add(DNSRule_DefaultOptions().apply {
                     inbound = listOf(deviceInboundTag)
@@ -1031,15 +1093,14 @@ fun buildConfig(
                 if (hosts.isNullOrEmpty()) return@forEach
 
                 val serverTag = "dns-sub-$gid"
-                dns.servers.add(DNSServerOptions().apply {
-                    address = resolver
-                    tag = serverTag
-                    detour = TAG_DIRECT
-                    if (!resolver.isIpAddress()) {
-                        address_resolver = "dns-direct"
-                    }
-                    strategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy("server"))
-                })
+                val resolverStrategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy("server"))
+                dns.servers.add(parseDnsServer(
+                    resolver,
+                    tag = serverTag,
+                    defaultDetour = TAG_DIRECT,
+                    resolver = if (!resolver.isIpAddress()) "dns-direct" else null,
+                    domainStrategy = resolverStrategy
+                ))
                 dns.rules.add(0, DNSRule_DefaultOptions().apply {
                     makeSingBoxRule(hosts)
                     server = serverTag

@@ -331,6 +331,16 @@ public class SingBoxOptions {
 
         public String tag;
 
+        public String type;
+
+        public String server;
+
+        public Integer server_port;
+
+        public String path;
+
+        public String rcode;
+
         public String address;
 
         public String address_resolver;
@@ -340,6 +350,10 @@ public class SingBoxOptions {
         public Long address_fallback_delay;
 
         public String strategy;
+
+        public String inet4_range;
+
+        public String inet6_range;
 
         public String detour;
 
@@ -2827,6 +2841,8 @@ public class SingBoxOptions {
         public String interface_name;
 
         public Integer mtu;
+
+        public List<String> address;
 
         // Generate note: Listable
         public List<String> inet4_address;

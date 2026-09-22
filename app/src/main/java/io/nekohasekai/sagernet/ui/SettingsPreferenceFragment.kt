@@ -157,11 +157,8 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
             true
         }
 
-        val tunImplementation = findPreference<SimpleMenuPreference>(Key.TUN_IMPLEMENTATION)!!
         val enableHevTun = findPreference<SwitchPreference>(Key.ENABLE_HEV_TUN)!!
-        tunImplementation.isEnabled = !DataStore.enableHevTun
-        enableHevTun.setOnPreferenceChangeListener { _, newValue ->
-            tunImplementation.isEnabled = !(newValue as Boolean)
+        enableHevTun.setOnPreferenceChangeListener { _, _ ->
             needReload()
             true
         }
@@ -229,7 +226,6 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
         ipv6Mode.onPreferenceChangeListener = reloadListener
 
         resolveDestination.onPreferenceChangeListener = reloadListener
-        tunImplementation.onPreferenceChangeListener = reloadListener
         acquireWakeLock.onPreferenceChangeListener = reloadListener
         hideFromRecentApps.setOnPreferenceChangeListener { _, newValue ->
             (activity as? MainActivity)?.applyHideFromRecentApps(newValue as Boolean)
