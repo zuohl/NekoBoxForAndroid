@@ -84,6 +84,9 @@ private fun parseDnsHosts(value: String): Map<String, List<String>> {
         if (addresses.isEmpty()) return@forEach
         hosts.getOrPut(domain) { mutableListOf() }.addAll(addresses)
     }
+    hosts.putIfAbsent("dns.google", mutableListOf("8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"))
+    hosts.putIfAbsent("cloudflare-dns.com", mutableListOf("1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"))
+    hosts.putIfAbsent("one.one.one.one", mutableListOf("1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"))
     return hosts.mapValues { (_, addresses) -> addresses.distinct() }
 }
 
@@ -989,6 +992,7 @@ fun buildConfig(
             if (!forTest) dns.servers.add(parseDnsServer(
                 it ?: throw Exception("No remote DNS, check your settings!"),
                 tag = "dns-remote",
+                defaultDetour = mainProxyTag,
                 resolver = "dns-direct",
                 domainStrategy = autoDnsDomainStrategy(SingBoxOptionsUtil.domainStrategy("dns-remote"))
             ))
@@ -1064,9 +1068,9 @@ fun buildConfig(
                     _hack_config_map["ip_accept_any"] = true
                 })
             }
-            // avoid loopback
+            // avoid loopback for direct outbounds
             dns.rules.add(0, DNSRule_DefaultOptions().apply {
-                outbound = mutableListOf("any")
+                outbound = mutableListOf(TAG_DIRECT, TAG_BYPASS)
                 server = "dns-direct"
             })
             // force bypass (always top DNS rule)

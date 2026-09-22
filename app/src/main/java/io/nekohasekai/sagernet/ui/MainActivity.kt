@@ -91,7 +91,12 @@ class MainActivity : ThemedActivity(),
         }
         onBackPressedDispatcher.addCallback {
             if (supportFragmentManager.findFragmentById(R.id.fragment_holder) is ConfigurationFragment) {
-                moveTaskToBack(true)
+                if (DataStore.isLightweightMode) {
+                    finishAffinity()
+                    android.os.Process.killProcess(android.os.Process.myPid())
+                } else {
+                    moveTaskToBack(true)
+                }
             } else {
                 displayFragmentWithId(R.id.nav_configuration)
             }
