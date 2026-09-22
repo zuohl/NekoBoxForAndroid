@@ -349,6 +349,10 @@ public class SingBoxOptions {
 
         public Long address_fallback_delay;
 
+        public String domain_resolver;
+
+        public String domain_strategy;
+
         public String strategy;
 
         public String inet4_range;

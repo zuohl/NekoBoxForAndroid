@@ -237,7 +237,6 @@ fun buildConfig(
         dns = DNSOptions().apply {
             servers = mutableListOf()
             rules = mutableListOf()
-            independent_cache = true
         }
 
         fun autoDnsDomainStrategy(s: String): String? {
@@ -292,11 +291,9 @@ fun buildConfig(
         route = RouteOptions().apply {
             auto_detect_interface = true
             override_android_vpn = true
+            // init routing object
             rules = mutableListOf()
             rule_set = mutableListOf()
-
-            // 添加并发拨号设置
-             concurrent_dial = DataStore.concurrentDial
         }
 
         // returns outbound tag
@@ -908,8 +905,8 @@ fun buildConfig(
             return DNSServerOptions().apply {
                 this.tag = tag
                 if (defaultDetour != null) this.detour = defaultDetour
-                if (resolver != null) this.address_resolver = resolver
-                if (domainStrategy != null) this.strategy = domainStrategy
+                if (resolver != null) this.domain_resolver = resolver
+                if (domainStrategy != null) this.domain_strategy = domainStrategy
                 val trimmed = input.trim()
                 when {
                     trimmed.startsWith("https://", ignoreCase = true) -> {
