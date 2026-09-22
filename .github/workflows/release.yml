@@ -87,39 +87,39 @@ jobs:
           ls -lh dist/
 
       - name: Upload arm64-v8a APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-arm64-v8a
           path: dist/*arm64-v8a*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload armeabi-v7a APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-armeabi-v7a
           path: dist/*armeabi-v7a*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload x86_64 APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-x86_64
           path: dist/*x86_64*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload x86 APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-x86
           path: dist/*x86*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload Universal APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-universal
           path: dist/*universal*.apk
           if-no-files-found: ignore
+          archive: false
   publish:
     name: Publish Release
     if: github.event.inputs.publish != 'y'
@@ -131,7 +131,7 @@ jobs:
         with:
           submodules: recursive
       - name: Download Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           path: artifacts
       - name: Release

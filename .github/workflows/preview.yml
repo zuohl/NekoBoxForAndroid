@@ -81,36 +81,36 @@ jobs:
           ls -lh dist/
 
       - name: Upload arm64-v8a APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-Preview-arm64-v8a
           path: dist/*arm64-v8a*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload armeabi-v7a APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-Preview-armeabi-v7a
           path: dist/*armeabi-v7a*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload x86_64 APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-Preview-x86_64
           path: dist/*x86_64*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload x86 APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-Preview-x86
           path: dist/*x86*.apk
           if-no-files-found: ignore
+          archive: false
 
       - name: Upload Universal APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: NekoBox-Preview-universal
           path: dist/*universal*.apk
           if-no-files-found: ignore
+          archive: false
