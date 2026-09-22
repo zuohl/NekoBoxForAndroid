@@ -68,7 +68,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.gradle
-          key: gradle-oss-${{ hashFiles('**/*.gradle.kts', 'buildSrc/**', 'release.keystore') }}-v2
+          key: gradle-oss-${{ hashFiles('**/*.gradle.kts', 'buildSrc/**', 'release.keystore') }}-v3
       - name: Gradle Build
         env:
           BUILD_PLUGIN: none
