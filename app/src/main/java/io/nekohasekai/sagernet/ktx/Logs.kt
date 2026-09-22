@@ -37,6 +37,12 @@ object Logs {
             return l
         }
 
+    fun config(message: String) {
+        if (level >= 1) {
+            Libcore.nekoLogPrintln("[Debug] [${mkTag()}] $message")
+        }
+    }
+
     fun d(message: String) {
         if (level >= 3) {
             Libcore.nekoLogPrintln("[Debug] [${mkTag()}] $message")
