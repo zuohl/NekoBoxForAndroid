@@ -673,6 +673,14 @@ fun buildConfig(
                             
                             rulesetTags.add(Pair(tag, isIPRuleset))
                             
+                            if (detour == TAG_BYPASS || detour == TAG_DIRECT) {
+                                url.toHttpUrlOrNull()?.host?.let { host ->
+                                    if (!host.isIpAddress()) {
+                                        domainListDNSDirectForce.add("full:$host")
+                                    }
+                                }
+                            }
+                            
                             rule_set = (rule_set ?: mutableListOf()).apply {
                                 add(tag)
                             }
@@ -850,6 +858,7 @@ fun buildConfig(
         for (freedom in arrayOf(TAG_DIRECT, TAG_BYPASS)) outbounds.add(Outbound().apply {
             tag = freedom
             type = "direct"
+            _hack_config_map["domain_resolver"] = "dns-direct"
         })
 
         if (DataStore.enableTLSFragment) {
