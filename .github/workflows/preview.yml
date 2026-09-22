@@ -64,7 +64,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.gradle
-          key: gradle-oss-${{ hashFiles('**/*.gradle.kts') }}
+          key: gradle-oss-${{ hashFiles('**/*.gradle.kts', 'buildSrc/**', 'release.keystore') }}-v2
       - name: Gradle Build
         env:
           BUILD_PLUGIN: none
@@ -73,7 +73,10 @@ jobs:
           echo "ndk.dir=${ANDROID_HOME}/ndk/25.0.8775105" >> local.properties
           export LOCAL_PROPERTIES="${{ secrets.LOCAL_PROPERTIES }}"
           ./run init action gradle
-          ./gradlew app:assemblePreviewRelease
+          export KEYSTORE_PASS="${{ secrets.KEYSTORE_PASS || 'nekobox123' }}"
+          export ALIAS_NAME="${{ secrets.ALIAS_NAME || 'nekobox' }}"
+          export ALIAS_PASS="${{ secrets.ALIAS_PASS || 'nekobox123' }}"
+          ./gradlew app:assemblePreviewRelease --no-build-cache
       - name: Collect APKs
         run: |
           mkdir -p dist
