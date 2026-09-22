@@ -100,7 +100,8 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
         globalCustomConfig.useConfigStore(Key.GLOBAL_CUSTOM_CONFIG)
 
         logLevel.dialogLayoutResource = R.layout.layout_loglevel_help
-        logLevel.setOnPreferenceChangeListener { _, _ ->
+        logLevel.setOnPreferenceChangeListener { _, newValue ->
+            Logs.updateLogLevel((newValue as? String)?.toIntOrNull())
             needRestart()
             true
         }
@@ -214,9 +215,6 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
         bypassLan.onPreferenceChangeListener = reloadListener
         bypassLanInCore.onPreferenceChangeListener = reloadListener
         mtu.onPreferenceChangeListener = reloadListener
-
-        val concurrentDial = findPreference<SwitchPreference>(Key.CONCURRENT_DIAL)!!
-        concurrentDial.onPreferenceChangeListener = reloadListener
 
         enableFakeDns.onPreferenceChangeListener = reloadListener
         remoteDns.onPreferenceChangeListener = reloadListener

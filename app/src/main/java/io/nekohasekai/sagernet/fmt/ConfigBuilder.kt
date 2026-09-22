@@ -224,6 +224,7 @@ fun buildConfig(
         }
 
         log = LogOptions().apply {
+            disabled = DataStore.logLevel == 0
             level = when (DataStore.logLevel) {
                 0 -> "panic"
                 1 -> "warn"
