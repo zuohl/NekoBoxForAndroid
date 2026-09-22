@@ -4,10 +4,13 @@ import (
 	"context"
 
 	"github.com/sagernet/sing-box/adapter"
+	"github.com/sagernet/sing-box/adapter/certificate"
 	"github.com/sagernet/sing-box/adapter/endpoint"
 	"github.com/sagernet/sing-box/adapter/inbound"
 	"github.com/sagernet/sing-box/adapter/outbound"
+	"github.com/sagernet/sing-box/adapter/provider"
 	"github.com/sagernet/sing-box/adapter/service"
+	"github.com/sagernet/sing-box/include"
 	"github.com/sagernet/sing-box/dns"
 	"github.com/sagernet/sing-box/dns/transport"
 	"github.com/sagernet/sing-box/dns/transport/fakeip"
@@ -90,9 +93,15 @@ func nekoboxAndroidOutboundRegistry() *outbound.Registry {
 	hysteria2.RegisterOutbound(registry)
 	juicity.RegisterOutbound(registry)
 
-	wireguard.RegisterOutbound(registry)
-
 	return registry
+}
+
+func nekoboxAndroidProviderRegistry() *provider.Registry {
+	return include.ProviderRegistry()
+}
+
+func nekoboxAndroidCertificateProviderRegistry() *certificate.Registry {
+	return include.CertificateProviderRegistry()
 }
 
 func nekoboxAndroidEndpointRegistry() *endpoint.Registry {

@@ -78,11 +78,43 @@ jobs:
           export LOCAL_PROPERTIES="${{ secrets.LOCAL_PROPERTIES }}"
           ./run init action gradle
           KEYSTORE_PASS="${{ secrets.KEYSTORE_PASS }}" ALIAS_NAME="${{ secrets.ALIAS_NAME }}" ALIAS_PASS="${{ secrets.ALIAS_PASS}}" ./gradlew app:assembleOssRelease
-          APK=$(find app/build/outputs/apk -name '*arm64-v8a*.apk')
-          APK=$(dirname $APK)
-          echo "APK=$APK" >> $GITHUB_ENV
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v7
+      - name: Collect APKs
+        run: |
+          mkdir -p dist
+          find app/build/outputs/apk -name "*.apk" -exec cp {} dist/ \;
+          ls -lh dist/
+
+      - name: Upload arm64-v8a APK
+        uses: actions/upload-artifact@v4
         with:
-          name: NekoBoxs
-          path: ${{ env.APK }}
+          name: NekoBox-arm64-v8a
+          path: dist/*arm64-v8a*.apk
+          if-no-files-found: ignore
+
+      - name: Upload armeabi-v7a APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: NekoBox-armeabi-v7a
+          path: dist/*armeabi-v7a*.apk
+          if-no-files-found: ignore
+
+      - name: Upload x86_64 APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: NekoBox-x86_64
+          path: dist/*x86_64*.apk
+          if-no-files-found: ignore
+
+      - name: Upload x86 APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: NekoBox-x86
+          path: dist/*x86*.apk
+          if-no-files-found: ignore
+
+      - name: Upload Universal APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: NekoBox-universal
+          path: dist/*universal*.apk
+          if-no-files-found: ignore
