@@ -791,7 +791,7 @@ fun buildConfig(
                         -2L -> {
                             if (shouldAddDnsRule) {
                                 userDNSRuleList += makeDnsRuleObj().apply {
-                                    server = "dns-block"
+                                    action = "reject"
                                     disable_cache = true
                                 }
                             }
@@ -802,7 +802,7 @@ fun buildConfig(
                                     if (tag.startsWith("ruleset-") && tagInfo != null && !tagInfo.second) {
                                         userDNSRuleList += DNSRule_DefaultOptions().apply {
                                             rule_set = mutableListOf(tag)
-                                            server = "dns-block"
+                                            action = "reject"
                                             disable_cache = true
                                         }
                                     }
@@ -971,12 +971,6 @@ fun buildConfig(
                 }
             }
         }
-
-        dns.servers.add(DNSServerOptions().apply {
-            type = "rcode"
-            tag = "dns-block"
-            rcode = "NOERROR"
-        })
 
         dns.servers.add(DNSServerOptions().apply {
             type = "local"
