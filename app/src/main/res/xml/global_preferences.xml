@@ -96,7 +96,6 @@
             app:summary="@string/hide_from_recent_apps_summary"
             app:title="@string/hide_from_recent_apps" />
         <SwitchPreference
-            app:defaultValue="false"
             app:icon="@drawable/ic_baseline_memory_24"
             app:key="isLightweightMode"
             app:summary="@string/lightweight_mode_summary"

@@ -93,7 +93,6 @@ class MainActivity : ThemedActivity(),
             if (supportFragmentManager.findFragmentById(R.id.fragment_holder) is ConfigurationFragment) {
                 if (DataStore.isLightweightMode) {
                     finishAffinity()
-                    android.os.Process.killProcess(android.os.Process.myPid())
                 } else {
                     moveTaskToBack(true)
                 }
@@ -550,6 +549,9 @@ class MainActivity : ThemedActivity(),
         GroupManager.userInterface = null
         DataStore.configurationStore.unregisterChangeListener(this)
         connection.disconnect(this)
+        if (DataStore.isLightweightMode && isFinishing) {
+            android.os.Process.killProcess(android.os.Process.myPid())
+        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
