@@ -297,6 +297,22 @@ func (w *boxPlatformInterfaceWrapper) Write(p []byte) (n int, err error) {
 
 // 日志
 
+var (
+	currentBoxLogLevel   uint8 = sblog.LevelInfo
+	currentBoxLogDisabled bool = false
+)
+
+func SetBoxLogLevel(level string, disabled bool) {
+	currentBoxLogDisabled = disabled
+	if level != "" {
+		if lvl, err := sblog.ParseLevel(level); err == nil {
+			currentBoxLogLevel = lvl
+			return
+		}
+	}
+	currentBoxLogLevel = sblog.LevelInfo
+}
+
 type boxPlatformLogWriterWrapper struct {
 }
 
@@ -305,6 +321,9 @@ var boxPlatformLogWriter sblog.PlatformWriter = &boxPlatformLogWriterWrapper{}
 func (w *boxPlatformLogWriterWrapper) DisableColors() bool { return true }
 
 func (w *boxPlatformLogWriterWrapper) WriteMessage(level uint8, message string) {
+	if currentBoxLogDisabled || level > currentBoxLogLevel {
+		return
+	}
 	if !strings.HasSuffix(message, "\n") {
 		message += "\n"
 	}

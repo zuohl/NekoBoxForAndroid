@@ -93,6 +93,12 @@ func NewSingBoxInstance(config string, localTransport LocalDNSTransport) (b *Box
 		return nil, fmt.Errorf("decode config: %v", err)
 	}
 
+	if options.Log != nil {
+		SetBoxLogLevel(options.Log.Level, options.Log.Disabled)
+	} else {
+		SetBoxLogLevel("info", false)
+	}
+
 	// create box
 	instance, err := box.New(box.Options{
 		Options:           options,
