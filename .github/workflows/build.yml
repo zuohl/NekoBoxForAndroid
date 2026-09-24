@@ -16,9 +16,9 @@ jobs:
         with:
           submodules: recursive
       - name: Golang Status
-        run: find buildScript libcore/*.sh | xargs cat | sha1sum > golang_status
+        run: find buildScript libcore/*.sh -type f | sort | xargs cat | sha1sum > golang_status
       - name: Libcore Status
-        run: git ls-files libcore | xargs cat | sha1sum > libcore_status
+        run: git ls-files libcore | sort | xargs cat | sha1sum > libcore_status
       - name: LibCore Cache
         id: cache
         uses: actions/cache@v5
@@ -34,6 +34,12 @@ jobs:
       - name: Native Build
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./run lib core
+      - name: Upload Libcore Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: libcore-aar
+          path: app/libs/libcore.aar
+          archive: false
   build:
     name: Build OSS APK
     runs-on: ubuntu-latest
@@ -45,15 +51,21 @@ jobs:
         with:
           submodules: recursive
       - name: Golang Status
-        run: find buildScript libcore/*.sh | xargs cat | sha1sum > golang_status
+        run: find buildScript libcore/*.sh -type f | sort | xargs cat | sha1sum > golang_status
       - name: Libcore Status
-        run: git ls-files libcore | xargs cat | sha1sum > libcore_status
+        run: git ls-files libcore | sort | xargs cat | sha1sum > libcore_status
       - name: LibCore Cache
         uses: actions/cache@v5
         with:
           path: |
             app/libs/libcore.aar
           key: ${{ hashFiles('.github/workflows/*', 'golang_status', 'libcore_status') }}
+      - name: Download Libcore Fallback
+        if: hashFiles('app/libs/libcore.aar') == ''
+        uses: actions/download-artifact@v7
+        with:
+          name: libcore-aar
+          path: app/libs
       - name: HevTun Status
         run: |
           git submodule status hev-socks5-tunnel > hev_status
