@@ -128,6 +128,10 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
         }
 
         httpProxyBypass.setOnBindEditTextListener(EditTextPreferenceModifiers.Hosts)
+        if (DataStore.dnsHosts.isBlank()) {
+            DataStore.dnsHosts = DataStore.DEFAULT_DNS_HOSTS
+            dnsHosts.text = DataStore.DEFAULT_DNS_HOSTS
+        }
         dnsHosts.setOnBindEditTextListener(EditTextPreferenceModifiers.Hosts)
         httpProxyBypass.summaryProvider = ListSummaryProvider(maxLines = 1)
         dnsHosts.summaryProvider = ListSummaryProvider(maxLines = 1)

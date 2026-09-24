@@ -31,6 +31,10 @@ object DataStore : OnPreferenceDataStoreChangeListener {
     @Volatile
     var mixedInboundAuthed: Boolean = false
 
+    const val DEFAULT_DNS_HOSTS = "dns.google 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844\n" +
+            "cloudflare-dns.com 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001\n" +
+            "one.one.one.one 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001"
+
     val configurationStore = RoomPreferenceDataStore(PublicDatabase.kvPairDao)
     val profileCacheStore = RoomPreferenceDataStore(TempDatabase.profileCacheDao)
 
@@ -194,7 +198,7 @@ object DataStore : OnPreferenceDataStoreChangeListener {
 
     var appendHttpProxy by configurationStore.boolean(Key.APPEND_HTTP_PROXY)
     var httpProxyBypass by configurationStore.string(Key.HTTP_PROXY_BYPASS) { "" }
-    var dnsHosts by configurationStore.string(Key.DNS_HOSTS) { "" }
+    var dnsHosts by configurationStore.string(Key.DNS_HOSTS) { DEFAULT_DNS_HOSTS }
     var strictRoute by configurationStore.boolean(Key.STRICT_ROUTE) { true }
     var connectionTestURL by configurationStore.string(Key.CONNECTION_TEST_URL) { CONNECTION_TEST_URL }
     var connectionTestConcurrent by configurationStore.int("connectionTestConcurrent") { 5 }
