@@ -38,18 +38,21 @@ fun SingBoxOptions.DNSRule_DefaultOptions.makeSingBoxRule(list: List<String>) {
     domain_regex = mutableListOf<String>()
     domain_keyword = mutableListOf<String>()
     list.forEach {
-        if (it.startsWith("geosite:")) {
-            rule_set.plusAssign(it)
-        } else if (it.startsWith("full:")) {
-            domain.plusAssign(it.removePrefix("full:").lowercase())
-        } else if (it.startsWith("domain:")) {
-            domain_suffix.plusAssign(it.removePrefix("domain:").lowercase())
-        } else if (it.startsWith("regexp:")) {
-            domain_regex.plusAssign(it.removePrefix("regexp:").lowercase())
-        } else if (it.startsWith("keyword:")) {
-            domain_keyword.plusAssign(it.removePrefix("keyword:").lowercase())
+        val trimmed = it.trim()
+        if (trimmed.startsWith("geosite:")) {
+            rule_set.plusAssign(trimmed)
+        } else if (trimmed.startsWith("full:")) {
+            domain.plusAssign(trimmed.removePrefix("full:").lowercase())
+        } else if (trimmed.startsWith("domain:")) {
+            val suffix = trimmed.removePrefix("domain:").lowercase().removePrefix("*.").removePrefix(".")
+            if (suffix.isNotBlank()) domain_suffix.plusAssign(suffix)
+        } else if (trimmed.startsWith("regexp:")) {
+            domain_regex.plusAssign(trimmed.removePrefix("regexp:").lowercase())
+        } else if (trimmed.startsWith("keyword:")) {
+            domain_keyword.plusAssign(trimmed.removePrefix("keyword:").lowercase())
         } else {
-            domain_suffix.plusAssign(it.lowercase())
+            val suffix = trimmed.lowercase().removePrefix("*.").removePrefix(".")
+            if (suffix.isNotBlank()) domain_suffix.plusAssign(suffix)
         }
     }
     rule_set?.removeIf { it.isNullOrBlank() }
@@ -122,18 +125,21 @@ fun SingBoxOptions.Rule_DefaultOptions.makeSingBoxRule(list: List<String>, isIP:
             }
             return@forEach
         }
-        if (it.startsWith("geosite:")) {
-            rule_set.plusAssign(it)
-        } else if (it.startsWith("full:")) {
-            domain.plusAssign(it.removePrefix("full:").lowercase())
-        } else if (it.startsWith("domain:")) {
-            domain_suffix.plusAssign(it.removePrefix("domain:").lowercase())
-        } else if (it.startsWith("regexp:")) {
-            domain_regex.plusAssign(it.removePrefix("regexp:").lowercase())
-        } else if (it.startsWith("keyword:")) {
-            domain_keyword.plusAssign(it.removePrefix("keyword:").lowercase())
+        val trimmed = it.trim()
+        if (trimmed.startsWith("geosite:")) {
+            rule_set.plusAssign(trimmed)
+        } else if (trimmed.startsWith("full:")) {
+            domain.plusAssign(trimmed.removePrefix("full:").lowercase())
+        } else if (trimmed.startsWith("domain:")) {
+            val suffix = trimmed.removePrefix("domain:").lowercase().removePrefix("*.").removePrefix(".")
+            if (suffix.isNotBlank()) domain_suffix.plusAssign(suffix)
+        } else if (trimmed.startsWith("regexp:")) {
+            domain_regex.plusAssign(trimmed.removePrefix("regexp:").lowercase())
+        } else if (trimmed.startsWith("keyword:")) {
+            domain_keyword.plusAssign(trimmed.removePrefix("keyword:").lowercase())
         } else {
-            domain_suffix.plusAssign(it.lowercase())
+            val suffix = trimmed.lowercase().removePrefix("*.").removePrefix(".")
+            if (suffix.isNotBlank()) domain_suffix.plusAssign(suffix)
         }
     }
     ip_cidr?.removeIf { it.isNullOrBlank() }

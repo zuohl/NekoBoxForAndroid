@@ -1073,22 +1073,22 @@ fun buildConfig(
                     query_type = listOf("A", "AAAA")
                 })
             }
-            if (dnsHosts.isNotEmpty()) {
-                dns.rules.add(0, DNSRule_DefaultOptions().apply {
-                    server = TAG_DNS_HOSTS
-                    _hack_config_map["ip_accept_any"] = true
-                })
-            }
             // avoid loopback for direct outbounds
             dns.rules.add(0, DNSRule_DefaultOptions().apply {
                 outbound = mutableListOf(TAG_DIRECT, TAG_BYPASS)
                 server = "dns-direct"
             })
-            // force bypass (always top DNS rule)
+            // force bypass (always top DNS rule before hosts)
             if (domainListDNSDirectForce.isNotEmpty()) {
                 dns.rules.add(0, DNSRule_DefaultOptions().apply {
                     makeSingBoxRule(domainListDNSDirectForce.toHashSet().toList())
                     server = "dns-direct"
+                })
+            }
+            if (dnsHosts.isNotEmpty()) {
+                dns.rules.add(0, DNSRule_DefaultOptions().apply {
+                    server = TAG_DNS_HOSTS
+                    _hack_config_map["ip_accept_any"] = true
                 })
             }
             perGroupResolver.forEach { (gid, resolver) ->
