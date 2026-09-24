@@ -800,7 +800,7 @@ fun buildConfig(
                         -2L -> {
                             if (shouldAddDnsRule) {
                                 userDNSRuleList += makeDnsRuleObj().apply {
-                                    action = "reject"
+                                    this.action = "reject"
                                     disable_cache = true
                                 }
                             }
@@ -811,7 +811,7 @@ fun buildConfig(
                                     if (tag.startsWith("ruleset-") && tagInfo != null && !tagInfo.second) {
                                         userDNSRuleList += DNSRule_DefaultOptions().apply {
                                             rule_set = mutableListOf(tag)
-                                            action = "reject"
+                                            this.action = "reject"
                                             disable_cache = true
                                         }
                                     }
@@ -1019,7 +1019,9 @@ fun buildConfig(
         // dns object user rules
         if (enableDnsRouting) {
             userDNSRuleList.forEach {
-                if (!it.checkEmpty()) dns.rules.add(it)
+                if (!it.checkEmpty() && (!it.server.isNullOrBlank() || !it.action.isNullOrBlank())) {
+                    dns.rules.add(it)
+                }
             }
         }
 
